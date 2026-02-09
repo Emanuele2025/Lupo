@@ -1,0 +1,16 @@
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\bin\Debug\net10.0-windows\Lupo.exe
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\bin\Debug\net10.0-windows\Lupo.deps.json
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\bin\Debug\net10.0-windows\Lupo.runtimeconfig.json
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\bin\Debug\net10.0-windows\Lupo.dll
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\bin\Debug\net10.0-windows\Lupo.pdb
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\Lupo.Form1.resources
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\Lupo.csproj.GenerateResource.cache
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\Lupo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\Lupo.AssemblyInfoInputs.cache
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\Lupo.AssemblyInfo.cs
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\Lupo.csproj.CoreCompileInputs.cache
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\Lupo.dll
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\refint\Lupo.dll
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\Lupo.pdb
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\Lupo.genruntimeconfig.cache
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\ref\Lupo.dll
