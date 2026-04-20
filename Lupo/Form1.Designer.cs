@@ -40,7 +40,7 @@
             // 
             // BtnScarica
             // 
-            BtnScarica.Location = new Point(230, 119);
+            BtnScarica.Location = new Point(230, 94);
             BtnScarica.Name = "BtnScarica";
             BtnScarica.Size = new Size(75, 23);
             BtnScarica.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(0, 90);
+            textBox1.Location = new Point(0, 65);
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
             textBox1.Size = new Size(305, 23);
@@ -58,7 +58,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(5, 63);
+            label1.Location = new Point(5, 38);
             label1.Name = "label1";
             label1.Size = new Size(152, 15);
             label1.TabIndex = 2;
@@ -67,7 +67,7 @@
             // BtnCercaCartella
             // 
             BtnCercaCartella.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            BtnCercaCartella.Location = new Point(311, 90);
+            BtnCercaCartella.Location = new Point(311, 65);
             BtnCercaCartella.Name = "BtnCercaCartella";
             BtnCercaCartella.Size = new Size(30, 29);
             BtnCercaCartella.TabIndex = 3;
