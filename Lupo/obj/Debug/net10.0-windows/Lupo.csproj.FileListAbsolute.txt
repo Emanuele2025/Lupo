@@ -14,3 +14,5 @@ C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\ref
 C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\Lupo.pdb
 C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\Lupo.genruntimeconfig.cache
 C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\ref\Lupo.dll
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\Lupo.Form2.resources
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\Lupo.sourcelink.json
