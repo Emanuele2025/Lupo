@@ -25,5 +25,17 @@ namespace Lupo
         {
 
         }
+
+        private void BtnScarica_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore:" + ex.Message, "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

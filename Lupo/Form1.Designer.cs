@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             BtnScarica = new Button();
-            textBox1 = new TextBox();
-            label1 = new Label();
+            TxtPercorsoCartella = new TextBox();
+            lblEtichetta = new Label();
             BtnCercaCartella = new Button();
-            pictureBox1 = new PictureBox();
-            listBox1 = new ListBox();
+            pcbAnteprima = new PictureBox();
+            lsbListaFile = new ListBox();
             label2 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbAnteprima).BeginInit();
             SuspendLayout();
             // 
             // BtnScarica
@@ -46,23 +46,24 @@
             BtnScarica.TabIndex = 0;
             BtnScarica.Text = "Scarica";
             BtnScarica.UseVisualStyleBackColor = true;
+            BtnScarica.Click += BtnScarica_Click;
             // 
-            // textBox1
+            // TxtPercorsoCartella
             // 
-            textBox1.Location = new Point(0, 65);
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(305, 23);
-            textBox1.TabIndex = 1;
+            TxtPercorsoCartella.Location = new Point(0, 65);
+            TxtPercorsoCartella.Name = "TxtPercorsoCartella";
+            TxtPercorsoCartella.ReadOnly = true;
+            TxtPercorsoCartella.Size = new Size(305, 23);
+            TxtPercorsoCartella.TabIndex = 1;
             // 
-            // label1
+            // lblEtichetta
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(5, 38);
-            label1.Name = "label1";
-            label1.Size = new Size(152, 15);
-            label1.TabIndex = 2;
-            label1.Text = "Percorso dove salvare il file:";
+            lblEtichetta.AutoSize = true;
+            lblEtichetta.Location = new Point(5, 38);
+            lblEtichetta.Name = "lblEtichetta";
+            lblEtichetta.Size = new Size(152, 15);
+            lblEtichetta.TabIndex = 2;
+            lblEtichetta.Text = "Percorso dove salvare il file:";
             // 
             // BtnCercaCartella
             // 
@@ -75,21 +76,21 @@
             BtnCercaCartella.TextAlign = ContentAlignment.TopLeft;
             BtnCercaCartella.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // pcbAnteprima
             // 
-            pictureBox1.Location = new Point(566, 28);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(398, 369);
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
+            pcbAnteprima.Location = new Point(566, 28);
+            pcbAnteprima.Name = "pcbAnteprima";
+            pcbAnteprima.Size = new Size(398, 369);
+            pcbAnteprima.TabIndex = 4;
+            pcbAnteprima.TabStop = false;
             // 
-            // listBox1
+            // lsbListaFile
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(365, 28);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(195, 364);
-            listBox1.TabIndex = 5;
+            lsbListaFile.FormattingEnabled = true;
+            lsbListaFile.Location = new Point(365, 28);
+            lsbListaFile.Name = "lsbListaFile";
+            lsbListaFile.Size = new Size(195, 364);
+            lsbListaFile.TabIndex = 5;
             // 
             // label2
             // 
@@ -110,11 +111,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(964, 407);
             Controls.Add(label2);
-            Controls.Add(listBox1);
-            Controls.Add(pictureBox1);
+            Controls.Add(lsbListaFile);
+            Controls.Add(pcbAnteprima);
             Controls.Add(BtnCercaCartella);
-            Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(lblEtichetta);
+            Controls.Add(TxtPercorsoCartella);
             Controls.Add(BtnScarica);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
@@ -122,7 +123,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Lupo - Gestione del download dello sfondo di bing";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbAnteprima).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -130,11 +131,11 @@
         #endregion
 
         private Button BtnScarica;
-        private TextBox textBox1;
-        private Label label1;
+        private TextBox TxtPercorsoCartella;
+        private Label lblEtichetta;
         private Button BtnCercaCartella;
-        private PictureBox pictureBox1;
-        private ListBox listBox1;
+        private PictureBox pcbAnteprima;
+        private ListBox lsbListaFile;
         private Label label2;
     }
 }
