@@ -12,6 +12,8 @@ namespace Lupo
         private const int SPIF_UPDATEINIFILE = 0x01;
         private const int SPIF_SENDWININICHANGE = 0x02;
 
+        //TODO: Aggiungere la funzione che salva e legge un file di configurazione dove si trova la cartella dove si trova no file, in modo da non doverla scegliere ogni volta.
+
 
 
 
@@ -37,5 +39,19 @@ namespace Lupo
                 MessageBox.Show("Errore:" + ex.Message, "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
+
+        //Funzioni varie
+
+
+
+
+
+
+
+
+
+
     }
 }
