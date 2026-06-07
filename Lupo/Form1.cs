@@ -44,6 +44,13 @@ namespace Lupo
 
         //Funzioni varie
 
+        private void SalvaPercorso(string percorso)
+        {
+
+
+
+
+        }
 
 
 
@@ -52,6 +59,5 @@ namespace Lupo
 
 
 
-
-    }
+        }
 }
