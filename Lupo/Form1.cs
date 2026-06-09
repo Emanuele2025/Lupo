@@ -14,7 +14,7 @@ namespace Lupo
 
         //TODO: Aggiungere la funzione che salva e legge un file di configurazione dove si trova la cartella dove si trova no file, in modo da non doverla scegliere ogni volta.
 
-
+        private string percorsoCartella = string.Empty;
 
 
 
@@ -25,6 +25,10 @@ namespace Lupo
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //Rilevo il percorso
+
+
+
 
         }
 
@@ -32,6 +36,12 @@ namespace Lupo
         {
             try
             {
+
+
+                if (string.IsNullOrWhiteSpace( percorsoCartella))
+                {
+                    SalvaPercorso(percorsoCartella);
+                }
 
             }
             catch (Exception ex)
@@ -46,7 +56,14 @@ namespace Lupo
 
         private void SalvaPercorso(string percorso)
         {
+            try
+            {
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore:" + ex.Message, "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
 
