@@ -38,7 +38,7 @@ namespace Lupo
             {
 
 
-                if (string.IsNullOrWhiteSpace( percorsoCartella))
+                if (string.IsNullOrWhiteSpace(percorsoCartella))
                 {
                     SalvaPercorso(percorsoCartella);
                 }
@@ -69,12 +69,28 @@ namespace Lupo
 
         }
 
+        private void BtnCercaCartella_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Apro la finestra di dialogo per la selezione della cartella
+                using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
+                {
+                    folderBrowserDialog.Description = "Seleziona la cartella di destinazione per salvare l'immagine di bing";
+                    if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        // Imposto il percorso selezionato nella casella di testo
+                        TxtPercorsoCartella.Text = folderBrowserDialog.SelectedPath;
+                    }
+                }
 
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore: " + ex.Message);
 
-
-
-
-
+            }
         }
+    }
 }

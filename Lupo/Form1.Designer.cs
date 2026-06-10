@@ -75,6 +75,7 @@
             BtnCercaCartella.Text = "...";
             BtnCercaCartella.TextAlign = ContentAlignment.TopLeft;
             BtnCercaCartella.UseVisualStyleBackColor = true;
+            BtnCercaCartella.Click += BtnCercaCartella_Click;
             // 
             // pcbAnteprima
             // 
