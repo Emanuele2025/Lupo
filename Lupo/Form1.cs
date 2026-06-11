@@ -1,4 +1,5 @@
 using System.Runtime.InteropServices;
+using System.Text.Json;
 
 namespace Lupo
 {
@@ -68,6 +69,55 @@ namespace Lupo
 
 
         }
+
+        static async Task DownloadImmagine(string percorsoSalvataggio)
+        {
+            //Percorso di Bing dove estrapolare l'immagine
+            string bingApiUrl = "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=it-IT";
+            //string filePath = Path.Combine("C:\\Varie\\", "bing_wallpaper4.webp");
+            //Richiesta http
+            using HttpClient client = new HttpClient();
+
+            try
+            {
+                //Rilevo codice html per la gestione JSON
+                string json = await client.GetStringAsync(bingApiUrl);
+
+                //Estraggo il nome dell'immagine ed il percorso dell'immagine bing
+                using JsonDocument doc = JsonDocument.Parse(json);
+                string urlBase = doc.RootElement
+                    .GetProperty("images")[0]
+                    .GetProperty("urlbase")
+                    .GetString();
+
+                //Nome del file da salvare
+                string nomeFile = urlBase?.Split(".").Length > 1 ? urlBase.Split(".")[1] : urlBase;
+                //rileva il sito preciso con l'immagine
+                string imageUrl = $"https://www.bing.com{urlBase}_1920x1080.webp";
+                nomeFile = percorsoSalvataggio + "\\" + nomeFile + ".webp";
+
+                //Scarico l'immagine in array di byte
+                byte[] imageBytes = await client.GetByteArrayAsync(imageUrl);
+                await File.WriteAllBytesAsync(nomeFile, imageBytes);
+                //bool result = SystemParametersInfo(SPI_SETDESKWALLPAPER, 0, nomeFile, SPIF_UPDATEINIFILE | SPIF_SENDWININICHANGE);
+                //if (!result)
+                //{
+                //    throw new Exception("Impossibile impostare l'immagine come sfondo del desktop.");
+                //}
+                MessageBox.Show("File salvato con successo ed impostato l'immagine di sfondo.");
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore: " + ex.Message);
+            }
+        }
+
+
+
+
 
         private void BtnCercaCartella_Click(object sender, EventArgs e)
         {
