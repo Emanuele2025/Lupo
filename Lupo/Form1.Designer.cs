@@ -82,6 +82,7 @@
             pcbAnteprima.Location = new Point(566, 28);
             pcbAnteprima.Name = "pcbAnteprima";
             pcbAnteprima.Size = new Size(398, 369);
+            pcbAnteprima.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbAnteprima.TabIndex = 4;
             pcbAnteprima.TabStop = false;
             // 
