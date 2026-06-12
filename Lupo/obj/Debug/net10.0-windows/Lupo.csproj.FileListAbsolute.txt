@@ -16,3 +16,13 @@ C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\Lup
 C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\ref\Lupo.dll
 C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\Lupo.Form2.resources
 C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\Lupo.sourcelink.json
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\bin\Debug\net10.0-windows\SkiaSharp.dll
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\bin\Debug\net10.0-windows\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\bin\Debug\net10.0-windows\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\bin\Debug\net10.0-windows\runtimes\win-arm64\native\libSkiaSharp.pdb
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\bin\Debug\net10.0-windows\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\bin\Debug\net10.0-windows\runtimes\win-x64\native\libSkiaSharp.pdb
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\bin\Debug\net10.0-windows\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\bin\Debug\net10.0-windows\runtimes\win-x86\native\libSkiaSharp.pdb
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\Lupo.csproj.AssemblyReference.cache
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\Lupo.csproj.Up2Date
