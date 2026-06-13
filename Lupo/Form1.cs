@@ -30,7 +30,11 @@ namespace Lupo
         private void Form1_Load(object sender, EventArgs e)
         {
             //Rilevo il percorso
-
+            percorsoCartella = RilevaPercorsoFileImpostazioni();
+            if (!string.IsNullOrWhiteSpace(percorsoCartella))
+            {
+                TxtPercorsoCartella.Text = percorsoCartella;
+            }
 
             CaricaImmagineIniziale();
 
@@ -118,6 +122,9 @@ namespace Lupo
             }
         }
 
+        /// <summary>
+        /// Carica nel controllo listbox i file webp che sono stati scaricati
+        /// </summary>
         private void CaricaImmagineIniziale()
         {
             
@@ -164,6 +171,30 @@ namespace Lupo
 
            
             
+        }
+
+        /// <summary>
+        /// Rileva dalle impsostazioni il percorso dell'ultimo salvataggio
+        /// </summary>
+        /// <returns></returns>
+        private string RilevaPercorsoFileImpostazioni()
+        {
+            string percorsoRilevato = "";
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore:" + ex.Message, "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+            return percorsoRilevato;
+
+
+
+
         }
 
 
