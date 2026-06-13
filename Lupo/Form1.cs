@@ -62,6 +62,8 @@ namespace Lupo
 
         //Funzioni varie
 
+
+        //TODO: Finire, salva il dato, solo se il percorso è diverso dal precedente (in questo caso visualizzo un messaggio) o se è vuoto, ancora non inizializzato 
         private void SalvaPercorso(string percorso)
         {
             try
@@ -77,6 +79,11 @@ namespace Lupo
 
         }
 
+        /// <summary>
+        /// Effettua il download dell'immagine.
+        /// </summary>
+        /// <param name="percorsoSalvataggio"></param>
+        /// <returns></returns>
         static async Task DownloadImmagine(string percorsoSalvataggio)
         {
             //Percorso di Bing dove estrapolare l'immagine
