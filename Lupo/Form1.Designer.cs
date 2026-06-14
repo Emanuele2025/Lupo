@@ -93,6 +93,7 @@
             lsbListaFile.Name = "lsbListaFile";
             lsbListaFile.Size = new Size(195, 364);
             lsbListaFile.TabIndex = 5;
+            lsbListaFile.SelectedIndexChanged += lsbListaFile_SelectedIndexChanged;
             // 
             // label2
             // 

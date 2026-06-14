@@ -134,11 +134,11 @@ namespace Lupo
         /// </summary>
         private void CaricaImmagineIniziale()
         {
-            
+
 
             try
             {
-                if (lsbListaFile.Items.Count<1)
+                if (lsbListaFile.Items.Count < 1)
                 {
                     return;
                 }
@@ -176,8 +176,8 @@ namespace Lupo
 
 
 
-           
-            
+
+
         }
 
         /// <summary>
@@ -204,7 +204,30 @@ namespace Lupo
 
         }
 
+        //Per caricare l'immagine di tipo webp nel controllo listbox
+        private void CaricaImmagineDaListBox()
+        {
+            string percorso = "C:\\Varie\\" + lsbListaFile.SelectedItem?.ToString();
+            using (var data = File.OpenRead(percorso))
+            {
+                //Creo un oggetto skiaBitmap dallo stream dati
+                var skiaBitmap = SKBitmap.Decode(data);
 
+                //Converto SKBitmap in System.Drawing.Image
+                using (var ms = new MemoryStream())
+                {
+                    //Imposto nel MemoryStream l'oggetto  SKBitmap come PNG 
+                    using (var skiaImage = SKImage.FromBitmap(skiaBitmap))
+                    {
+                        skiaImage.Encode(SKEncodedImageFormat.Png, 100).SaveTo(ms);
+                    }
+                    ms.Position = 0; // Reset stream position
+
+                    //Visualizzo l'immagine nel PictureBox
+                    pcbAnteprima.Image = System.Drawing.Image.FromStream(ms);
+                }
+            }
+        }
 
         private void BtnCercaCartella_Click(object sender, EventArgs e)
         {
@@ -228,6 +251,19 @@ namespace Lupo
                 MessageBox.Show("Errore:" + ex.Message, "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        }
+
+        private void lsbListaFile_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                CaricaImmagineDaListBox();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore:" + ex.Message, "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
     }
 }
