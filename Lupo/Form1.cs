@@ -263,7 +263,12 @@ namespace Lupo
             {
                 MessageBox.Show("Errore:" + ex.Message, "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
+        }
+
+        private void mniImpostaComeSfondo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

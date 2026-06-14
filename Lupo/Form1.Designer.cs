@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             BtnScarica = new Button();
             TxtPercorsoCartella = new TextBox();
             lblEtichetta = new Label();
@@ -35,7 +36,10 @@
             pcbAnteprima = new PictureBox();
             lsbListaFile = new ListBox();
             label2 = new Label();
+            cmsMenu = new ContextMenuStrip(components);
+            mniImpostaComeSfondo = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)pcbAnteprima).BeginInit();
+            cmsMenu.SuspendLayout();
             SuspendLayout();
             // 
             // BtnScarica
@@ -79,6 +83,7 @@
             // 
             // pcbAnteprima
             // 
+            pcbAnteprima.ContextMenuStrip = cmsMenu;
             pcbAnteprima.Location = new Point(566, 28);
             pcbAnteprima.Name = "pcbAnteprima";
             pcbAnteprima.Size = new Size(398, 369);
@@ -108,6 +113,20 @@
             label2.Text = "Lupo - Programma per il download dei sfondi giornalieri del motore di ricerca di Bing";
             label2.TextAlign = ContentAlignment.TopCenter;
             // 
+            // cmsMenu
+            // 
+            cmsMenu.Items.AddRange(new ToolStripItem[] { mniImpostaComeSfondo });
+            cmsMenu.Name = "cmsMenu";
+            cmsMenu.Size = new Size(191, 48);
+            // 
+            // mniImpostaComeSfondo
+            // 
+            mniImpostaComeSfondo.Name = "mniImpostaComeSfondo";
+            mniImpostaComeSfondo.Size = new Size(190, 22);
+            mniImpostaComeSfondo.Text = "Imposta come sfondo";
+            mniImpostaComeSfondo.ToolTipText = "Imposta l'immagine come sfondo di Windows ";
+            mniImpostaComeSfondo.Click += mniImpostaComeSfondo_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -127,6 +146,7 @@
             Text = "Lupo - Gestione del download dello sfondo di bing";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pcbAnteprima).EndInit();
+            cmsMenu.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -140,5 +160,7 @@
         private PictureBox pcbAnteprima;
         private ListBox lsbListaFile;
         private Label label2;
+        private ContextMenuStrip cmsMenu;
+        private ToolStripMenuItem mniImpostaComeSfondo;
     }
 }
