@@ -44,7 +44,14 @@ namespace Lupo
         {
             try
             {
-
+                if (string.IsNullOrWhiteSpace(percorsoCartella))
+                {
+                    percorsoCartella = TxtPercorsoCartella.Text.Trim();
+                }
+                if (!string.IsNullOrWhiteSpace(TxtPercorsoCartella.Text.Trim()) && TxtPercorsoCartella.Text != percorsoCartella)
+                {
+                    //Messaggio si vuole salvare il nuovo percorso?
+                }
 
                 if (string.IsNullOrWhiteSpace(percorsoCartella))
                 {
