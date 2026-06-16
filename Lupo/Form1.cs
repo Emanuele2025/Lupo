@@ -29,14 +29,49 @@ namespace Lupo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Rilevo il percorso
-            percorsoCartella = RilevaPercorsoFileImpostazioni();
-            if (!string.IsNullOrWhiteSpace(percorsoCartella))
+            try
             {
-                TxtPercorsoCartella.Text = percorsoCartella;
+                //Rilevo il percorso
+                percorsoCartella = RilevaPercorsoFileImpostazioni();
+                if (!string.IsNullOrWhiteSpace(percorsoCartella))
+                {
+                    TxtPercorsoCartella.Text = percorsoCartella;
+                }
+                if (string.IsNullOrWhiteSpace( percorsoCartella))
+                {
+                    return;
+                }
+
+                var files = new DirectoryInfo(percorsoCartella).GetFiles()
+                    .Select(file => new
+                    {
+                        NomeFile = file.Name,
+                        DataCreazione = file.CreationTime
+                    })
+                    .Where(file => file.NomeFile.EndsWith(".webp", StringComparison.OrdinalIgnoreCase))
+                    .OrderByDescending(file => file.DataCreazione)
+                    .ToList();
+
+                List<string> fileNames = files.Select(f => f.NomeFile).ToList();
+                lsbListaFile.DataSource = fileNames;
+
+                // Se ci sono file, seleziona il primo e carica l'immagine
+                if (fileNames.Count > 0)
+                {
+                    lsbListaFile.SelectedIndex = 0;
+                    CaricaImmagineDaListBox();
+                }
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                MessageBox.Show("Errore: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Si è verificato un errore: {ex.Message}");
             }
 
-            CaricaImmagineIniziale();
+//            CaricaImmagineIniziale();
 
         }
 
