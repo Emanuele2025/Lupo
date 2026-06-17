@@ -79,6 +79,12 @@ namespace Lupo
         {
             try
             {
+                if (TxtPercorsoCartella.Text.Trim() == "")
+                {
+
+                    MessageBox.Show("Impostare un percorso dove salvare l'immagine.",   "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
                 if (string.IsNullOrWhiteSpace(percorsoCartella))
                 {
                     percorsoCartella = TxtPercorsoCartella.Text.Trim();
@@ -92,6 +98,33 @@ namespace Lupo
                 {
                     SalvaPercorso(percorsoCartella);
                 }
+
+                _ = DownloadImmagine(percorsoCartella);
+                string cartella = percorsoCartella;
+                var files = new DirectoryInfo(cartella).GetFiles()
+                    .Select(file => new
+                    {
+                        NomeFile = file.Name,
+                        DataCreazione = file.CreationTime
+                    })
+                    .Where(file => file.NomeFile.EndsWith(".webp", StringComparison.OrdinalIgnoreCase))
+                    .OrderByDescending(file => file.DataCreazione)
+                    .ToList();
+
+                List<string> fileNames = files.Select(f => f.NomeFile).ToList();
+                lsbListaFile.DataSource = fileNames;
+
+                // Se ci sono file, seleziona il primo e carica l'immagine
+                if (fileNames.Count > 0)
+                {
+                    lsbListaFile.SelectedIndex = 0;
+                    CaricaImmagineDaListBox();
+                }
+
+
+
+
+
 
             }
             catch (Exception ex)
@@ -160,7 +193,7 @@ namespace Lupo
                 //{
                 //    throw new Exception("Impossibile impostare l'immagine come sfondo del desktop.");
                 //}
-                MessageBox.Show("File salvato con successo ed impostato l'immagine di sfondo.");
+                MessageBox.Show("File salvato con successo.");
 
 
 
