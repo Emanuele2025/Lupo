@@ -65,11 +65,12 @@ namespace Lupo
             }
             catch (DirectoryNotFoundException ex)
             {
-                MessageBox.Show("Errore: " + ex.Message);
+                MessageBox.Show("Errore: " + ex.Message, "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Si è verificato un errore: {ex.Message}");
+                
+                MessageBox.Show($"Si è verificato un errore: {ex.Message}","Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             //            CaricaImmagineIniziale();
@@ -194,7 +195,7 @@ namespace Lupo
                 //{
                 //    throw new Exception("Impossibile impostare l'immagine come sfondo del desktop.");
                 //}
-                MessageBox.Show("File salvato con successo.");
+                MessageBox.Show("File salvato con successo.", "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
 
