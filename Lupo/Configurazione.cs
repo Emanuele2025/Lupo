@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.Json;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using static System.Windows.Forms.Design.AxImporter;
 
 namespace Lupo
 {
@@ -12,10 +15,7 @@ namespace Lupo
 
         private static readonly string PercorsoCartellaFileConfigurazione = Path.Combine(PercorsoCartella, "Luposettings.json");
 
-        /// <summary>
-        /// Percorso 
-        /// </summary>
-        public string PercorsoCartellaFileSFondi { get; set; }
+        
         public Configurazione() { 
         
         
@@ -30,19 +30,68 @@ namespace Lupo
         /// Rileva il percorso salvato della cartella dove scaricare i file di bing
         /// </summary>
         /// <returns></returns>
-        public string OttieniPercorso()
+        public (string PercorsoFile, DateTime DataUltimoDownload) OttieniPercorso()
         {
-            string PercorsoCertellaDownload = "";
+            
             try
             {
+
+                if (!File.Exists(PercorsoCartellaFileConfigurazione)) return ("", DateTime.MinValue);
+                string FileJson = File.ReadAllText(PercorsoCartellaFileConfigurazione);
+                var Opzioni = new JsonSerializerOptions { ReadCommentHandling = JsonCommentHandling.Skip };
+                var PercorsoSalvato = JsonSerializer.Deserialize<Impostazioni>(FileJson, Opzioni);
+
+                if (PercorsoSalvato != null)
+                {
+
+                    return (PercorsoSalvato.PercorsoCartellaFileBing, PercorsoSalvato.DataUltimoDownload);
+                }
+
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Errore:" + ex.Message, "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            return PercorsoCertellaDownload;
+            return ("", DateTime.MinValue);
         }
+
+
+        public bool SalvaDati(string percorsoCartellaDownload, DateTime ultimoDownload)
+        { 
+            bool esito = false;
+            try
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(PercorsoCartellaFileConfigurazione));
+                Impostazioni impostazioniDaSalvare = new Impostazioni();
+                var Opzioni = new JsonSerializerOptions { WriteIndented = true };
+                impostazioniDaSalvare.PercorsoCartellaFileBing = percorsoCartellaDownload;
+                impostazioniDaSalvare.DataUltimoDownload = ultimoDownload;
+
+                string serializzoImpostaioni = JsonSerializer.Serialize(impostazioniDaSalvare, Opzioni);
+
+                File.WriteAllText(PercorsoCartellaFileConfigurazione, serializzoImpostaioni);
+
+
+
+
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore:" + ex.Message, "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+            return esito;
+
+        }
+
+
 
 
 
@@ -50,4 +99,20 @@ namespace Lupo
 
 
     }
+
+    class Impostazioni 
+    {
+        /// <summary>
+        /// Percorso 
+        /// </summary>
+        public string PercorsoCartellaFileBing { get; set; } = "";
+         
+        public DateTime DataUltimoDownload { get; set; }
+
+    }
+
+
+
+
+
 }

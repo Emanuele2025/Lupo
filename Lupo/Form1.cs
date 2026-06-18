@@ -96,10 +96,7 @@ namespace Lupo
                     //Messaggio si vuole salvare il nuovo percorso?
                 }
 
-                if (string.IsNullOrWhiteSpace(percorsoCartella))
-                {
-                    SalvaPercorso(percorsoCartella);
-                }
+               
 
                 _ = DownloadImmagine(percorsoCartella);
                 string cartella = percorsoCartella;
@@ -124,7 +121,10 @@ namespace Lupo
                 }
 
 
-
+                if (!string.IsNullOrWhiteSpace(percorsoCartella))
+                {
+                    SalvaPercorso(percorsoCartella);
+                }
 
 
 
@@ -145,7 +145,7 @@ namespace Lupo
         {
             try
             {
-
+                bool esito = new Configurazione().SalvaDati(percorso, DateTime.Now);
             }
             catch (Exception ex)
             {
@@ -266,7 +266,7 @@ namespace Lupo
             string percorsoRilevato = "";
             try
             {
-
+                percorsoRilevato = new Configurazione().OttieniPercorso().PercorsoFile;
             }
             catch (Exception ex)
             {
