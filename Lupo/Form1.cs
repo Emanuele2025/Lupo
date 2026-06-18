@@ -33,11 +33,12 @@ namespace Lupo
             {
                 //Rilevo il percorso
                 percorsoCartella = RilevaPercorsoFileImpostazioni();
+                 
                 if (!string.IsNullOrWhiteSpace(percorsoCartella))
                 {
                     TxtPercorsoCartella.Text = percorsoCartella;
                 }
-                if (string.IsNullOrWhiteSpace( percorsoCartella))
+                if (string.IsNullOrWhiteSpace(percorsoCartella))
                 {
                     return;
                 }
@@ -71,7 +72,7 @@ namespace Lupo
                 MessageBox.Show($"Si è verificato un errore: {ex.Message}");
             }
 
-//            CaricaImmagineIniziale();
+            //            CaricaImmagineIniziale();
 
         }
 
@@ -82,7 +83,7 @@ namespace Lupo
                 if (TxtPercorsoCartella.Text.Trim() == "")
                 {
 
-                    MessageBox.Show("Impostare un percorso dove salvare l'immagine.",   "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Impostare un percorso dove salvare l'immagine.", "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 if (string.IsNullOrWhiteSpace(percorsoCartella))
@@ -344,6 +345,11 @@ namespace Lupo
         private void mniImpostaComeSfondo_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmsMenu_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = (pcbAnteprima.Image == null);
         }
     }
 }

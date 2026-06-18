@@ -34,10 +34,10 @@
             lblEtichetta = new Label();
             BtnCercaCartella = new Button();
             pcbAnteprima = new PictureBox();
-            lsbListaFile = new ListBox();
-            label2 = new Label();
             cmsMenu = new ContextMenuStrip(components);
             mniImpostaComeSfondo = new ToolStripMenuItem();
+            lsbListaFile = new ListBox();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pcbAnteprima).BeginInit();
             cmsMenu.SuspendLayout();
             SuspendLayout();
@@ -91,6 +91,21 @@
             pcbAnteprima.TabIndex = 4;
             pcbAnteprima.TabStop = false;
             // 
+            // cmsMenu
+            // 
+            cmsMenu.Items.AddRange(new ToolStripItem[] { mniImpostaComeSfondo });
+            cmsMenu.Name = "cmsMenu";
+            cmsMenu.Size = new Size(191, 48);
+            cmsMenu.Opening += cmsMenu_Opening;
+            // 
+            // mniImpostaComeSfondo
+            // 
+            mniImpostaComeSfondo.Name = "mniImpostaComeSfondo";
+            mniImpostaComeSfondo.Size = new Size(190, 22);
+            mniImpostaComeSfondo.Text = "Imposta come sfondo";
+            mniImpostaComeSfondo.ToolTipText = "Imposta l'immagine come sfondo di Windows ";
+            mniImpostaComeSfondo.Click += mniImpostaComeSfondo_Click;
+            // 
             // lsbListaFile
             // 
             lsbListaFile.FormattingEnabled = true;
@@ -112,20 +127,6 @@
             label2.TabIndex = 6;
             label2.Text = "Lupo - Programma per il download dei sfondi giornalieri del motore di ricerca di Bing";
             label2.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // cmsMenu
-            // 
-            cmsMenu.Items.AddRange(new ToolStripItem[] { mniImpostaComeSfondo });
-            cmsMenu.Name = "cmsMenu";
-            cmsMenu.Size = new Size(191, 48);
-            // 
-            // mniImpostaComeSfondo
-            // 
-            mniImpostaComeSfondo.Name = "mniImpostaComeSfondo";
-            mniImpostaComeSfondo.Size = new Size(190, 22);
-            mniImpostaComeSfondo.Text = "Imposta come sfondo";
-            mniImpostaComeSfondo.ToolTipText = "Imposta l'immagine come sfondo di Windows ";
-            mniImpostaComeSfondo.Click += mniImpostaComeSfondo_Click;
             // 
             // Form1
             // 
