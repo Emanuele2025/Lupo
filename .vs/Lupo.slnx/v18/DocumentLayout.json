@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\emanu\\source\\repos\\Emanuele2025\\Lupo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{32218771-9D3F-2369-93B0-1C92D0F9007C}|Lupo\\Lupo.csproj|c:\\users\\emanu\\source\\repos\\emanuele2025\\lupo\\lupo\\configurazione.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32218771-9D3F-2369-93B0-1C92D0F9007C}|Lupo\\Lupo.csproj|solutionrelative:lupo\\configurazione.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{32218771-9D3F-2369-93B0-1C92D0F9007C}|Lupo\\Lupo.csproj|c:\\users\\emanu\\source\\repos\\emanuele2025\\lupo\\lupo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32218771-9D3F-2369-93B0-1C92D0F9007C}|Lupo\\Lupo.csproj|solutionrelative:lupo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32218771-9D3F-2369-93B0-1C92D0F9007C}|Lupo\\Lupo.csproj|c:\\users\\emanu\\source\\repos\\emanuele2025\\lupo\\lupo\\configurazione.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32218771-9D3F-2369-93B0-1C92D0F9007C}|Lupo\\Lupo.csproj|solutionrelative:lupo\\configurazione.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{32218771-9D3F-2369-93B0-1C92D0F9007C}|Lupo\\Lupo.csproj|C:\\Users\\emanu\\source\\repos\\Emanuele2025\\Lupo\\lupo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,7 +42,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Configurazione.cs",
               "DocumentMoniker": "C:\\Users\\emanu\\source\\repos\\Emanuele2025\\Lupo\\Lupo\\Configurazione.cs",
               "RelativeDocumentMoniker": "Lupo\\Configurazione.cs",
@@ -50,8 +50,7 @@
               "RelativeToolTip": "Lupo\\Configurazione.cs",
               "ViewState": "AgIAAEIAAAAAAAAAAAAEwFIAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T09:09:57.944Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-18T09:09:57.944Z"
             },
             {
               "$type": "Document",
@@ -66,13 +65,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\emanu\\source\\repos\\Emanuele2025\\Lupo\\Lupo\\Form1.cs",
               "RelativeDocumentMoniker": "Lupo\\Form1.cs",
-              "ToolTip": "C:\\Users\\emanu\\source\\repos\\Emanuele2025\\Lupo\\Lupo\\Form1.cs",
-              "RelativeToolTip": "Lupo\\Form1.cs",
-              "ViewState": "AgIAAIMAAAAAAAAAAAAvwJMAAAAQAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\emanu\\source\\repos\\Emanuele2025\\Lupo\\Lupo\\Form1.cs*",
+              "RelativeToolTip": "Lupo\\Form1.cs*",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAnwNAAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-09T20:43:00.275Z",
               "EditorCaption": ""
@@ -86,8 +85,7 @@
               "ToolTip": "C:\\Users\\emanu\\source\\repos\\Emanuele2025\\Lupo\\Lupo\\Form1.cs [Progettazione]",
               "RelativeToolTip": "Lupo\\Form1.cs [Progettazione]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-09T20:47:45.173Z",
-              "EditorCaption": " [Progettazione]"
+              "WhenOpened": "2026-02-09T20:47:45.173Z"
             },
             {
               "$type": "Document",

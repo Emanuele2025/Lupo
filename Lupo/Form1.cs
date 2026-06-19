@@ -206,56 +206,7 @@ namespace Lupo
             }
         }
 
-        /// <summary>
-        /// Carica nel controllo listbox i file webp che sono stati scaricati
-        /// </summary>
-        private void CaricaImmagineIniziale()
-        {
-
-
-            try
-            {
-                if (lsbListaFile.Items.Count < 1)
-                {
-                    return;
-                }
-                lsbListaFile.SelectedIndex = 1;
-                lsbListaFile.SelectedIndex = 0;
-                string percorso = "C:\\Varie\\" + lsbListaFile.SelectedItem?.ToString();
-                //Rilevo lo stream dei dati
-                using (var data = File.OpenRead(percorso))
-                {
-                    //Creo un oggetto skiaBitmap dallo stream dati
-                    var skiaBitmap = SKBitmap.Decode(data);
-
-                    //Converto SKBitmap in System.Drawing.Image
-                    using (var ms = new MemoryStream())
-                    {
-                        //Imposto nel MemoryStream l'oggetto  SKBitmap come PNG 
-                        using (var skiaImage = SKImage.FromBitmap(skiaBitmap))
-                        {
-                            skiaImage.Encode(SKEncodedImageFormat.Png, 100).SaveTo(ms);
-                        }
-                        ms.Position = 0; // Reset stream position
-
-                        //Visualizzo l'immagine nel PictureBox
-                        pcbAnteprima.Image = System.Drawing.Image.FromStream(ms);
-                    }
-                }
-
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Errore:" + ex.Message, "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-
-
-
-
-        }
+  
 
         /// <summary>
         /// Rileva dalle impsostazioni il percorso dell'ultimo salvataggio
