@@ -77,7 +77,7 @@ namespace Lupo
 
         }
 
-        private void BtnScarica_Click(object sender, EventArgs e)
+        private async void BtnScarica_Click(object sender, EventArgs e)
         {
             try
             {
@@ -98,7 +98,7 @@ namespace Lupo
 
                
 
-                _ = DownloadImmagine(percorsoCartella);
+                await  DownloadImmagine(percorsoCartella);
                 string cartella = percorsoCartella;
                 var files = new DirectoryInfo(cartella).GetFiles()
                     .Select(file => new
