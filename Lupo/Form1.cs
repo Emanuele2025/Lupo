@@ -188,11 +188,8 @@ namespace Lupo
                 //Scarico l'immagine in array di byte
                 byte[] imageBytes = await client.GetByteArrayAsync(imageUrl);
                 await File.WriteAllBytesAsync(nomeFile, imageBytes);
-                //bool result = SystemParametersInfo(SPI_SETDESKWALLPAPER, 0, nomeFile, SPIF_UPDATEINIFILE | SPIF_SENDWININICHANGE);
-                //if (!result)
-                //{
-                //    throw new Exception("Impossibile impostare l'immagine come sfondo del desktop.");
-                //}
+               
+
                 MessageBox.Show("File salvato con successo.", "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
