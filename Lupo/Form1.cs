@@ -15,9 +15,7 @@ namespace Lupo
         private const int SPI_SETDESKWALLPAPER = 20;
         private const int SPIF_UPDATEINIFILE = 0x01;
         private const int SPIF_SENDWININICHANGE = 0x02;
-
-        //TODO: Aggiungere la funzione che salva e legge un file di configurazione dove si trova la cartella dove si trova no file, in modo da non doverla scegliere ogni volta.
-
+ 
         private string percorsoCartella = string.Empty;
 
 
@@ -73,7 +71,7 @@ namespace Lupo
                 MessageBox.Show($"Si è verificato un errore: {ex.Message}","Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            //            CaricaImmagineIniziale();
+            
 
         }
 
@@ -159,7 +157,7 @@ namespace Lupo
         /// <summary>
         /// Effettua il download dell'immagine.
         /// </summary>
-        /// <param name="percorsoSalvataggio"></param>
+        /// <param name="percorsoSalvataggio">Percorso dove salvare il file immagine da scaricare</param>
         /// <returns></returns>
         static async Task DownloadImmagine(string percorsoSalvataggio)
         {
@@ -235,7 +233,7 @@ namespace Lupo
         //Per caricare l'immagine di tipo webp nel controllo listbox
         private void CaricaImmagineDaListBox()
         {
-            string percorso = "C:\\Varie\\" + lsbListaFile.SelectedItem?.ToString();
+            string percorso = Path.Combine(percorsoCartella, lsbListaFile.SelectedItem?.ToString());
             using (var data = File.OpenRead(percorso))
             {
                 //Creo un oggetto skiaBitmap dallo stream dati
@@ -296,7 +294,29 @@ namespace Lupo
 
         private void mniImpostaComeSfondo_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (lsbListaFile.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Selezionare un file.", "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                string percorsoFileImmagine = Path.Combine(percorsoCartella, lsbListaFile.SelectedItem?.ToString());
+                bool risultato = SystemParametersInfo(SPI_SETDESKWALLPAPER, 0, percorsoFileImmagine, SPIF_UPDATEINIFILE | SPIF_SENDWININICHANGE);
+                if (!risultato)
+                {
+                    throw new Exception("Impossibile impostare l'immagine come sfondo del desktop.");
+                }
+                if (risultato)
+                {
+                    MessageBox.Show("Immagine impostata come sfondo.", "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore:" + ex.Message, "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void cmsMenu_Opening(object sender, System.ComponentModel.CancelEventArgs e)
