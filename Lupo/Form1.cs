@@ -89,10 +89,7 @@ namespace Lupo
                 {
                     percorsoCartella = TxtPercorsoCartella.Text.Trim();
                 }
-                if (!string.IsNullOrWhiteSpace(TxtPercorsoCartella.Text.Trim()) && TxtPercorsoCartella.Text != percorsoCartella)
-                {
-                    //Messaggio si vuole salvare il nuovo percorso?
-                }
+                
 
                
 
@@ -118,7 +115,14 @@ namespace Lupo
                     CaricaImmagineDaListBox();
                 }
 
-
+                if (!string.IsNullOrWhiteSpace(TxtPercorsoCartella.Text.Trim()) && TxtPercorsoCartella.Text != percorsoCartella)
+                {
+                    //Messaggio si vuole salvare il nuovo percorso?
+                    if (MessageBox.Show("Il percorso selezionato è diverso da quello precedente, si vuole salvare?", "Lupo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                    {
+                        return;
+                    }
+                }
                 if (!string.IsNullOrWhiteSpace(percorsoCartella))
                 {
                     SalvaPercorso(percorsoCartella);
@@ -163,7 +167,7 @@ namespace Lupo
         {
             //Percorso di Bing dove estrapolare l'immagine
             string bingApiUrl = "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=it-IT";
-            //string filePath = Path.Combine("C:\\Varie\\", "bing_wallpaper4.webp");
+             
             //Richiesta http
             using HttpClient client = new HttpClient();
 
@@ -227,7 +231,7 @@ namespace Lupo
 
         }
 
-        //Per caricare l'immagine di tipo webp nel controllo listbox
+        //Per caricare l'immagine di tipo webp nel controllo PictureBox
         private void CaricaImmagineDaListBox()
         {
             string percorso = Path.Combine(percorsoCartella, lsbListaFile.SelectedItem?.ToString());
