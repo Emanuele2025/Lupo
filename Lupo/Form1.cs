@@ -15,7 +15,7 @@ namespace Lupo
         private const int SPI_SETDESKWALLPAPER = 20;
         private const int SPIF_UPDATEINIFILE = 0x01;
         private const int SPIF_SENDWININICHANGE = 0x02;
- 
+
         private string percorsoCartella = string.Empty;
 
 
@@ -31,7 +31,7 @@ namespace Lupo
             {
                 //Rilevo il percorso
                 percorsoCartella = RilevaPercorsoFileImpostazioni();
-                 
+
                 if (!string.IsNullOrWhiteSpace(percorsoCartella))
                 {
                     TxtPercorsoCartella.Text = percorsoCartella;
@@ -67,11 +67,11 @@ namespace Lupo
             }
             catch (Exception ex)
             {
-                
-                MessageBox.Show($"Si è verificato un errore: {ex.Message}","Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                MessageBox.Show($"Si è verificato un errore: {ex.Message}", "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            
+
 
         }
 
@@ -89,11 +89,11 @@ namespace Lupo
                 {
                     percorsoCartella = TxtPercorsoCartella.Text.Trim();
                 }
-                
+                 
 
-               
 
-                await  DownloadImmagine(percorsoCartella);
+
+                await DownloadImmagine(TxtPercorsoCartella.Text.Trim());
                 string cartella = percorsoCartella;
                 var files = new DirectoryInfo(cartella).GetFiles()
                     .Select(file => new
@@ -114,7 +114,6 @@ namespace Lupo
                     lsbListaFile.SelectedIndex = 0;
                     CaricaImmagineDaListBox();
                 }
-
                 if (!string.IsNullOrWhiteSpace(TxtPercorsoCartella.Text.Trim()) && TxtPercorsoCartella.Text != percorsoCartella)
                 {
                     //Messaggio si vuole salvare il nuovo percorso?
@@ -122,7 +121,13 @@ namespace Lupo
                     {
                         return;
                     }
+                    else
+                    {
+                        percorsoCartella = TxtPercorsoCartella.Text.Trim();
+                    }
+
                 }
+
                 if (!string.IsNullOrWhiteSpace(percorsoCartella))
                 {
                     SalvaPercorso(percorsoCartella);
@@ -141,8 +146,6 @@ namespace Lupo
 
         //Funzioni varie
 
-
-        //TODO: Finire, salva il dato, solo se il percorso è diverso dal precedente (in questo caso visualizzo un messaggio) o se è vuoto, ancora non inizializzato 
         private void SalvaPercorso(string percorso)
         {
             try
@@ -167,7 +170,7 @@ namespace Lupo
         {
             //Percorso di Bing dove estrapolare l'immagine
             string bingApiUrl = "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=it-IT";
-             
+
             //Richiesta http
             using HttpClient client = new HttpClient();
 
@@ -192,7 +195,7 @@ namespace Lupo
                 //Scarico l'immagine in array di byte
                 byte[] imageBytes = await client.GetByteArrayAsync(imageUrl);
                 await File.WriteAllBytesAsync(nomeFile, imageBytes);
-               
+
 
                 MessageBox.Show("File salvato con successo.", "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -205,7 +208,7 @@ namespace Lupo
             }
         }
 
-  
+
 
         /// <summary>
         /// Rileva dalle impsostazioni il percorso dell'ultimo salvataggio
@@ -312,7 +315,7 @@ namespace Lupo
                 {
                     MessageBox.Show("Immagine impostata come sfondo.", "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                
+
             }
             catch (Exception ex)
             {
