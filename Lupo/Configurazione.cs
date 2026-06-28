@@ -10,16 +10,17 @@ namespace Lupo
     public class Configurazione
     {
         //Percorso della cartella di configurazione
-     private static readonly string PercorsoCartella = Path.Combine(
-        Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Lupo");
+        private static readonly string PercorsoCartella = Path.Combine(
+           Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Lupo");
 
         private static readonly string PercorsoCartellaFileConfigurazione = Path.Combine(PercorsoCartella, "Luposettings.json");
 
-        
-        public Configurazione() { 
-        
-        
-        
+
+        public Configurazione()
+        {
+
+
+
         }
 
 
@@ -32,7 +33,7 @@ namespace Lupo
         /// <returns></returns>
         public (string PercorsoFile, DateTime DataUltimoDownload) OttieniPercorso()
         {
-            
+
             try
             {
 
@@ -51,14 +52,14 @@ namespace Lupo
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Errore:" + ex.Message, "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Utility.MessaggioErrore(ex.Message);
             }
             return ("", DateTime.MinValue);
         }
 
 
         public bool SalvaDati(string percorsoCartellaDownload, DateTime ultimoDownload)
-        { 
+        {
             bool esito = false;
             try
             {
@@ -73,17 +74,11 @@ namespace Lupo
                 File.WriteAllText(PercorsoCartellaFileConfigurazione, serializzoImpostaioni);
 
 
-
-
-
-
-
-
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Errore:" + ex.Message, "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                Utility.MessaggioErrore(ex.Message);
             }
 
 
@@ -100,13 +95,13 @@ namespace Lupo
 
     }
 
-    class Impostazioni 
+    class Impostazioni
     {
         /// <summary>
         /// Percorso 
         /// </summary>
         public string PercorsoCartellaFileBing { get; set; } = "";
-         
+
         public DateTime DataUltimoDownload { get; set; }
 
     }
