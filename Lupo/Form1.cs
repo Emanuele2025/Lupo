@@ -63,12 +63,12 @@ namespace Lupo
             }
             catch (DirectoryNotFoundException ex)
             {
-                MessageBox.Show("Errore: " + ex.Message, "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Utility.MessaggioErrore(ex.Message);
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show($"Si è verificato un errore: {ex.Message}", "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Utility.MessaggioErrore(ex.Message);
             }
 
 
@@ -138,7 +138,7 @@ namespace Lupo
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Errore:" + ex.Message, "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Utility.MessaggioErrore(ex.Message);
             }
         }
 
@@ -154,7 +154,7 @@ namespace Lupo
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Errore:" + ex.Message, "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Utility.MessaggioErrore(ex.Message);
             }
 
 
@@ -204,7 +204,7 @@ namespace Lupo
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Errore:" + ex.Message, "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Utility.MessaggioErrore(ex.Message);
             }
         }
 
@@ -223,7 +223,7 @@ namespace Lupo
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Errore:" + ex.Message, "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Utility.MessaggioErrore(ex.Message);
             }
 
 
@@ -278,7 +278,7 @@ namespace Lupo
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Errore:" + ex.Message, "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Utility.MessaggioErrore(ex.Message);
 
             }
         }
@@ -291,7 +291,7 @@ namespace Lupo
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Errore:" + ex.Message, "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Utility.MessaggioErrore(ex.Message);
             }
 
         }
@@ -319,7 +319,7 @@ namespace Lupo
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Errore:" + ex.Message, "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Utility.MessaggioErrore(ex.Message);
             }
         }
 
