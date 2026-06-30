@@ -89,7 +89,7 @@ namespace Lupo
                 {
                     percorsoCartella = TxtPercorsoCartella.Text.Trim();
                 }
-                 
+
 
 
 
@@ -116,7 +116,7 @@ namespace Lupo
                 }
                 if (!string.IsNullOrWhiteSpace(TxtPercorsoCartella.Text.Trim()) && TxtPercorsoCartella.Text != percorsoCartella)
                 {
-                     
+
                     if (MessageBox.Show("Il percorso selezionato è diverso da quello precedente, si vuole salvare?", "Lupo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                     {
                         return;
@@ -326,6 +326,17 @@ namespace Lupo
         private void cmsMenu_Opening(object sender, System.ComponentModel.CancelEventArgs e)
         {
             e.Cancel = (pcbAnteprima.Image == null);
+        }
+
+        private void mniEsci_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void MniInformazioni_Click(object sender, EventArgs e)
+        {
+            FrmInformazioni informazioni = new FrmInformazioni();
+            informazioni.ShowDialog();
         }
     }
 }

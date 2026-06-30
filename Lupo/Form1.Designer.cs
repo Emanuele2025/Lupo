@@ -38,13 +38,19 @@
             mniImpostaComeSfondo = new ToolStripMenuItem();
             lsbListaFile = new ListBox();
             label2 = new Label();
+            mnsMenu = new MenuStrip();
+            fileToolStripMenuItem = new ToolStripMenuItem();
+            mniEsci = new ToolStripMenuItem();
+            informazioniToolStripMenuItem = new ToolStripMenuItem();
+            MniInformazioni = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)pcbAnteprima).BeginInit();
             cmsMenu.SuspendLayout();
+            mnsMenu.SuspendLayout();
             SuspendLayout();
             // 
             // BtnScarica
             // 
-            BtnScarica.Location = new Point(230, 94);
+            BtnScarica.Location = new Point(230, 103);
             BtnScarica.Name = "BtnScarica";
             BtnScarica.Size = new Size(75, 23);
             BtnScarica.TabIndex = 0;
@@ -54,7 +60,7 @@
             // 
             // TxtPercorsoCartella
             // 
-            TxtPercorsoCartella.Location = new Point(0, 65);
+            TxtPercorsoCartella.Location = new Point(0, 74);
             TxtPercorsoCartella.Name = "TxtPercorsoCartella";
             TxtPercorsoCartella.ReadOnly = true;
             TxtPercorsoCartella.Size = new Size(305, 23);
@@ -63,7 +69,7 @@
             // lblEtichetta
             // 
             lblEtichetta.AutoSize = true;
-            lblEtichetta.Location = new Point(5, 38);
+            lblEtichetta.Location = new Point(5, 56);
             lblEtichetta.Name = "lblEtichetta";
             lblEtichetta.Size = new Size(152, 15);
             lblEtichetta.TabIndex = 2;
@@ -72,7 +78,7 @@
             // BtnCercaCartella
             // 
             BtnCercaCartella.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            BtnCercaCartella.Location = new Point(311, 65);
+            BtnCercaCartella.Location = new Point(311, 74);
             BtnCercaCartella.Name = "BtnCercaCartella";
             BtnCercaCartella.Size = new Size(30, 29);
             BtnCercaCartella.TabIndex = 3;
@@ -84,9 +90,9 @@
             // pcbAnteprima
             // 
             pcbAnteprima.ContextMenuStrip = cmsMenu;
-            pcbAnteprima.Location = new Point(566, 28);
+            pcbAnteprima.Location = new Point(566, 52);
             pcbAnteprima.Name = "pcbAnteprima";
-            pcbAnteprima.Size = new Size(398, 369);
+            pcbAnteprima.Size = new Size(398, 345);
             pcbAnteprima.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbAnteprima.TabIndex = 4;
             pcbAnteprima.TabStop = false;
@@ -95,7 +101,7 @@
             // 
             cmsMenu.Items.AddRange(new ToolStripItem[] { mniImpostaComeSfondo });
             cmsMenu.Name = "cmsMenu";
-            cmsMenu.Size = new Size(191, 48);
+            cmsMenu.Size = new Size(191, 26);
             cmsMenu.Opening += cmsMenu_Opening;
             // 
             // mniImpostaComeSfondo
@@ -109,9 +115,9 @@
             // lsbListaFile
             // 
             lsbListaFile.FormattingEnabled = true;
-            lsbListaFile.Location = new Point(365, 28);
+            lsbListaFile.Location = new Point(365, 51);
             lsbListaFile.Name = "lsbListaFile";
-            lsbListaFile.Size = new Size(195, 364);
+            lsbListaFile.Size = new Size(195, 349);
             lsbListaFile.TabIndex = 5;
             lsbListaFile.SelectedIndexChanged += lsbListaFile_SelectedIndexChanged;
             // 
@@ -128,11 +134,49 @@
             label2.Text = "Lupo - Programma per il download dei sfondi giornalieri del motore di ricerca di Bing";
             label2.TextAlign = ContentAlignment.TopCenter;
             // 
+            // mnsMenu
+            // 
+            mnsMenu.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, informazioniToolStripMenuItem });
+            mnsMenu.Location = new Point(0, 25);
+            mnsMenu.Name = "mnsMenu";
+            mnsMenu.Size = new Size(964, 24);
+            mnsMenu.TabIndex = 7;
+            mnsMenu.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mniEsci });
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(37, 20);
+            fileToolStripMenuItem.Text = "File";
+            // 
+            // mniEsci
+            // 
+            mniEsci.Name = "mniEsci";
+            mniEsci.Size = new Size(94, 22);
+            mniEsci.Text = "&Esci";
+            mniEsci.Click += mniEsci_Click;
+            // 
+            // informazioniToolStripMenuItem
+            // 
+            informazioniToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { MniInformazioni });
+            informazioniToolStripMenuItem.Name = "informazioniToolStripMenuItem";
+            informazioniToolStripMenuItem.Size = new Size(86, 20);
+            informazioniToolStripMenuItem.Text = "Informazioni";
+            // 
+            // MniInformazioni
+            // 
+            MniInformazioni.Name = "MniInformazioni";
+            MniInformazioni.Size = new Size(153, 22);
+            MniInformazioni.Text = "Informazioni....";
+            MniInformazioni.Click += MniInformazioni_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(964, 407);
+            Controls.Add(mnsMenu);
             Controls.Add(label2);
             Controls.Add(lsbListaFile);
             Controls.Add(pcbAnteprima);
@@ -141,6 +185,7 @@
             Controls.Add(TxtPercorsoCartella);
             Controls.Add(BtnScarica);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            MainMenuStrip = mnsMenu;
             MaximizeBox = false;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
@@ -148,6 +193,8 @@
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pcbAnteprima).EndInit();
             cmsMenu.ResumeLayout(false);
+            mnsMenu.ResumeLayout(false);
+            mnsMenu.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -163,5 +210,10 @@
         private Label label2;
         private ContextMenuStrip cmsMenu;
         private ToolStripMenuItem mniImpostaComeSfondo;
+        private MenuStrip mnsMenu;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem mniEsci;
+        private ToolStripMenuItem informazioniToolStripMenuItem;
+        private ToolStripMenuItem MniInformazioni;
     }
 }
