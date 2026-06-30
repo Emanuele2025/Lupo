@@ -102,6 +102,9 @@ namespace Lupo
 
         private void FrmInformazioni_Load(object sender, EventArgs e)
         {
+            //TEsto per descrizione
+            string descrizione = "Programma gratuito per il download degli sfondi giornalieri del motore di ricerca Bing";
+            textBoxDescription.Text = descrizione;
             //textBoxDescription
         }
     }
