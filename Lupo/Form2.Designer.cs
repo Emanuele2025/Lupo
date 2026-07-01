@@ -55,9 +55,10 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(22, 49);
             label1.Name = "label1";
-            label1.Size = new Size(70, 15);
+            label1.Size = new Size(83, 17);
             label1.TabIndex = 8;
             label1.Text = "Descrizione:";
             // 
@@ -73,7 +74,7 @@
             // LblDescrizione
             // 
             LblDescrizione.AutoSize = true;
-            LblDescrizione.Location = new Point(16, 69);
+            LblDescrizione.Location = new Point(29, 69);
             LblDescrizione.Name = "LblDescrizione";
             LblDescrizione.Size = new Size(0, 15);
             LblDescrizione.TabIndex = 10;
@@ -90,18 +91,20 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.Location = new Point(22, 95);
             label4.Name = "label4";
-            label4.Size = new Size(53, 15);
+            label4.Size = new Size(63, 17);
             label4.TabIndex = 11;
             label4.Text = "Ideatore:";
             // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.Location = new Point(22, 142);
             label5.Name = "label5";
-            label5.Size = new Size(53, 15);
+            label5.Size = new Size(62, 17);
             label5.TabIndex = 13;
             label5.Text = "Contatti:";
             // 
@@ -118,12 +121,11 @@
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(29, 163);
+            label6.Location = new Point(22, 163);
             label6.Name = "label6";
-            label6.Size = new Size(322, 15);
+            label6.Size = new Size(322, 35);
             label6.TabIndex = 15;
-            label6.Text = "Per informazioni o altro contattare Emanuele tramite email: ";
+            label6.Text = "Per informazioni o altro contattare Emanuele al numeo di telefono 339.1980065 oppure  tramite email: ";
             // 
             // Form2
             // 

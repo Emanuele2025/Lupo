@@ -335,8 +335,11 @@ namespace Lupo
 
         private void MniInformazioni_Click(object sender, EventArgs e)
         {
-            FrmInformazioni informazioni = new FrmInformazioni();
-            informazioni.ShowDialog();
+            //FrmInformazioni informazioni = new FrmInformazioni();
+            //informazioni.ShowDialog();
+            Form2 info = new Form2();
+            info.ShowDialog();
+
         }
     }
 }
