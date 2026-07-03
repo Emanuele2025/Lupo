@@ -72,6 +72,7 @@
             BtnChiudi.TabIndex = 9;
             BtnChiudi.Text = "Chiudi";
             BtnChiudi.UseVisualStyleBackColor = true;
+            BtnChiudi.Click += BtnChiudi_Click;
             // 
             // LblDescrizione
             // 

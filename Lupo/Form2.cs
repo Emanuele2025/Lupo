@@ -46,5 +46,10 @@ namespace Lupo
                 MessageBox.Show("Impossibile aprire il client di posta: " + ex.Message);
             }
         }
+
+        private void BtnChiudi_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
