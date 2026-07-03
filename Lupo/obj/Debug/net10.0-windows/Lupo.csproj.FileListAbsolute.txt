@@ -27,3 +27,4 @@ C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\bin\Debug\net10.0-windows\run
 C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\Lupo.csproj.AssemblyReference.cache
 C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\Lupo.csproj.Up2Date
 C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\Lupo.FrmInformazioni.resources
+C:\Users\emanu\source\repos\Emanuele2025\Lupo\Lupo\obj\Debug\net10.0-windows\Lupo.Properties.Resources.resources

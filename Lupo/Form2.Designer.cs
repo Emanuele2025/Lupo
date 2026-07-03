@@ -37,6 +37,8 @@
             label5 = new Label();
             lnlEmail = new LinkLabel();
             label6 = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label2
@@ -56,7 +58,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(22, 49);
+            label1.Location = new Point(304, 26);
             label1.Name = "label1";
             label1.Size = new Size(83, 17);
             label1.TabIndex = 8;
@@ -64,7 +66,7 @@
             // 
             // BtnChiudi
             // 
-            BtnChiudi.Location = new Point(701, 415);
+            BtnChiudi.Location = new Point(713, 283);
             BtnChiudi.Name = "BtnChiudi";
             BtnChiudi.Size = new Size(75, 23);
             BtnChiudi.TabIndex = 9;
@@ -74,7 +76,7 @@
             // LblDescrizione
             // 
             LblDescrizione.AutoSize = true;
-            LblDescrizione.Location = new Point(29, 69);
+            LblDescrizione.Location = new Point(311, 43);
             LblDescrizione.Name = "LblDescrizione";
             LblDescrizione.Size = new Size(0, 15);
             LblDescrizione.TabIndex = 10;
@@ -82,7 +84,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(22, 115);
+            label3.Location = new Point(304, 92);
             label3.Name = "label3";
             label3.Size = new Size(227, 15);
             label3.TabIndex = 12;
@@ -92,7 +94,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(22, 95);
+            label4.Location = new Point(304, 72);
             label4.Name = "label4";
             label4.Size = new Size(63, 17);
             label4.TabIndex = 11;
@@ -102,7 +104,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(22, 142);
+            label5.Location = new Point(304, 119);
             label5.Name = "label5";
             label5.Size = new Size(62, 17);
             label5.TabIndex = 13;
@@ -111,7 +113,7 @@
             // lnlEmail
             // 
             lnlEmail.AutoSize = true;
-            lnlEmail.Location = new Point(352, 163);
+            lnlEmail.Location = new Point(624, 160);
             lnlEmail.Name = "lnlEmail";
             lnlEmail.Size = new Size(176, 15);
             lnlEmail.TabIndex = 14;
@@ -121,17 +123,28 @@
             // 
             // label6
             // 
-            label6.Location = new Point(22, 163);
+            label6.Location = new Point(304, 140);
             label6.Name = "label6";
             label6.Size = new Size(322, 35);
             label6.TabIndex = 15;
             label6.Text = "Per informazioni o altro contattare Emanuele al numeo di telefono 339.1980065 oppure  tramite email: ";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.lupo;
+            pictureBox1.Location = new Point(-3, 28);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(308, 250);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 16;
+            pictureBox1.TabStop = false;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 318);
+            Controls.Add(pictureBox1);
             Controls.Add(label6);
             Controls.Add(lnlEmail);
             Controls.Add(label5);
@@ -148,6 +161,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Informazioni su Lupo";
             Load += Form2_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -163,5 +177,6 @@
         private Label label5;
         private LinkLabel lnlEmail;
         private Label label6;
+        private PictureBox pictureBox1;
     }
 }
