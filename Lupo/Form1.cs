@@ -27,6 +27,7 @@ namespace Lupo
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //TODO fare pacchetto setup
             try
             {
                 //Rilevo il percorso
