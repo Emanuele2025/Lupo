@@ -108,16 +108,16 @@ namespace Lupo
         private void FrmInformazioni_Load(object sender, EventArgs e)
         {
             //TEsto per descrizione
-            string descrizione = "Programma gratuito per il download degli sfondi giornalieri del motore di ricerca Bing";
+            string descrizione = "Programma gratuito per il download degli sfondi giornalieri del motore di ricerca Bing - Free program to download daily Bing search wallpapers";
             textBoxDescription.Text = descrizione;
             //textBoxDescription
-            this.labelCopyright.Text = "Per richieste, informazioni o altro, scrivere a emanuelemattei@tutanota.com";
+            this.labelCopyright.Text = "Per richieste, informazioni o altro, scrivere a emanuelemattei@tutanota.com - For requests, information, or anything else, write to emanuelemattei@tutanota.com";
         }
 
         private string GetDescrizione()
         {
 
-            string returnDescrizione = " Programma gratuito per il download degli sfondi giornalieri del motore di ricerca Bing";
+            string returnDescrizione = "Programma gratuito per il download degli sfondi giornalieri del motore di ricerca Bing - Free program to download daily Bing search wallpapers";
            // returnDescrizione = "Programma gratuito per la gestione delle organizzazioni non profit. Il software semplifica e vuole essere uno strumento di aiuto a tutte le organizzazioni di volontariato che si adoperano per finalità assistenziali, cultura e comunque non per lucro.  Uno strumento che si può ampliare anche in base alle richieste degli utilizzatori. L'utilizzo del software non comporta nulla nei confronti del suo realizzatore. Per maggiori informazioni o ampliamento chiamare il 339.1980065" + ringraziamenti;
             return returnDescrizione;
         }

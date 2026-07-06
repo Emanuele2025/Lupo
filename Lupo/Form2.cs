@@ -19,12 +19,13 @@ namespace Lupo
         private void Form2_Load(object sender, EventArgs e)
         {
             LblDescrizione.Text = GetDescrizione();
+            label6.Text += " For info or anything else, get in touch with Emanuele at 339.1980065 or by email:";
         }
 
         private string GetDescrizione()
         {
 
-            string returnDescrizione = " Programma gratuito per il download degli sfondi giornalieri del motore di ricerca Bing.";
+            string returnDescrizione = "Programma gratuito per il download degli sfondi giornalieri del motore di ricerca Bing. - Free program to download daily Bing search wallpapers";
             return returnDescrizione;
         }
 
@@ -32,7 +33,7 @@ namespace Lupo
         {
             var psi = new ProcessStartInfo
             {
-                FileName = "mailto:emanuelemattei@email.it",
+                FileName = "mailto:emanuelemattei@tutanota.com",
                 UseShellExecute = true
             };
 

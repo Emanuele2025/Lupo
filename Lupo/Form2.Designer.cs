@@ -76,10 +76,9 @@
             // 
             // LblDescrizione
             // 
-            LblDescrizione.AutoSize = true;
-            LblDescrizione.Location = new Point(311, 43);
+            LblDescrizione.Location = new Point(308, 43);
             LblDescrizione.Name = "LblDescrizione";
-            LblDescrizione.Size = new Size(0, 15);
+            LblDescrizione.Size = new Size(477, 29);
             LblDescrizione.TabIndex = 10;
             // 
             // label3
@@ -114,7 +113,7 @@
             // lnlEmail
             // 
             lnlEmail.AutoSize = true;
-            lnlEmail.Location = new Point(624, 160);
+            lnlEmail.Location = new Point(624, 188);
             lnlEmail.Name = "lnlEmail";
             lnlEmail.Size = new Size(176, 15);
             lnlEmail.TabIndex = 14;
@@ -124,9 +123,9 @@
             // 
             // label6
             // 
-            label6.Location = new Point(304, 140);
+            label6.Location = new Point(304, 136);
             label6.Name = "label6";
-            label6.Size = new Size(322, 35);
+            label6.Size = new Size(322, 63);
             label6.TabIndex = 15;
             label6.Text = "Per informazioni o altro contattare Emanuele al numeo di telefono 339.1980065 oppure  tramite email: ";
             // 
