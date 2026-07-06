@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Lupo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5f8d642db445d11ed9ef60ab6f06e4c5bbcea36")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e04ad0552eb5c87e07f664557c36cf5508481df7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Lupo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lupo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

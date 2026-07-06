@@ -28,6 +28,7 @@ namespace Lupo
         private void Form1_Load(object sender, EventArgs e)
         {
             //TODO fare pacchetto setup
+            //TODO icone gratuite https://icons8.com/
             try
             {
                 //Rilevo il percorso
