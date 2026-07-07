@@ -44,7 +44,7 @@ namespace Lupo
             catch (Exception ex)
             {
                 // log o mostrare messaggio all'utente
-                MessageBox.Show("Impossibile aprire il client di posta: " + ex.Message);
+                MessageBox.Show("Impossibile aprire il programma di posta elettronica: " + ex.Message);
             }
         }
 

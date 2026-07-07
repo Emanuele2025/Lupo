@@ -78,23 +78,23 @@
             // 
             LblDescrizione.Location = new Point(308, 43);
             LblDescrizione.Name = "LblDescrizione";
-            LblDescrizione.Size = new Size(477, 29);
+            LblDescrizione.Size = new Size(436, 65);
             LblDescrizione.TabIndex = 10;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(304, 92);
+            label3.Location = new Point(304, 128);
             label3.Name = "label3";
-            label3.Size = new Size(227, 15);
+            label3.Size = new Size(427, 15);
             label3.TabIndex = 12;
-            label3.Text = "Realizzato da Emanuele Mattei con amore";
+            label3.Text = "Realizzato da Emanuele Mattei con amore - Made with love by Emanuele Mattei";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(304, 72);
+            label4.Location = new Point(304, 108);
             label4.Name = "label4";
             label4.Size = new Size(63, 17);
             label4.TabIndex = 11;
@@ -104,7 +104,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(304, 119);
+            label5.Location = new Point(304, 155);
             label5.Name = "label5";
             label5.Size = new Size(62, 17);
             label5.TabIndex = 13;
@@ -113,7 +113,7 @@
             // lnlEmail
             // 
             lnlEmail.AutoSize = true;
-            lnlEmail.Location = new Point(624, 188);
+            lnlEmail.Location = new Point(624, 224);
             lnlEmail.Name = "lnlEmail";
             lnlEmail.Size = new Size(176, 15);
             lnlEmail.TabIndex = 14;
@@ -123,7 +123,7 @@
             // 
             // label6
             // 
-            label6.Location = new Point(304, 136);
+            label6.Location = new Point(304, 172);
             label6.Name = "label6";
             label6.Size = new Size(322, 63);
             label6.TabIndex = 15;
@@ -144,13 +144,13 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 318);
+            Controls.Add(LblDescrizione);
             Controls.Add(pictureBox1);
             Controls.Add(label6);
             Controls.Add(lnlEmail);
             Controls.Add(label5);
             Controls.Add(label3);
             Controls.Add(label4);
-            Controls.Add(LblDescrizione);
             Controls.Add(BtnChiudi);
             Controls.Add(label1);
             Controls.Add(label2);
