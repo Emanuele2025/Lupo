@@ -91,9 +91,7 @@ namespace Lupo
                 {
                     percorsoCartella = TxtPercorsoCartella.Text.Trim();
                 }
-
-
-
+ 
 
                 await DownloadImmagine(TxtPercorsoCartella.Text.Trim());
                 string cartella = percorsoCartella;
