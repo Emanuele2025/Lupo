@@ -38,6 +38,7 @@
             lnlEmail = new LinkLabel();
             label6 = new Label();
             pictureBox1 = new PictureBox();
+            TxtEmail = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -113,7 +114,7 @@
             // lnlEmail
             // 
             lnlEmail.AutoSize = true;
-            lnlEmail.Location = new Point(624, 224);
+            lnlEmail.Location = new Point(595, 235);
             lnlEmail.Name = "lnlEmail";
             lnlEmail.Size = new Size(176, 15);
             lnlEmail.TabIndex = 14;
@@ -139,11 +140,21 @@
             pictureBox1.TabIndex = 16;
             pictureBox1.TabStop = false;
             // 
+            // TxtEmail
+            // 
+            TxtEmail.Location = new Point(595, 253);
+            TxtEmail.Name = "TxtEmail";
+            TxtEmail.ReadOnly = true;
+            TxtEmail.Size = new Size(193, 23);
+            TxtEmail.TabIndex = 17;
+            TxtEmail.Text = "emanuelemattei@tutanota.com";
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 318);
+            Controls.Add(TxtEmail);
             Controls.Add(LblDescrizione);
             Controls.Add(pictureBox1);
             Controls.Add(label6);
@@ -178,5 +189,6 @@
         private LinkLabel lnlEmail;
         private Label label6;
         private PictureBox pictureBox1;
+        private TextBox TxtEmail;
     }
 }
