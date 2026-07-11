@@ -44,13 +44,49 @@ namespace Lupo
             catch (Exception ex)
             {
                 Utility.MessaggioErrore("Impossibile aprire il programma di posta elettronica: " + ex.Message);
-                 
+
             }
         }
 
         private void BtnChiudi_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void LnkIcon_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var psi = new ProcessStartInfo
+                {
+                    FileName = "https://icons8.it/",
+                    UseShellExecute = true
+                };
+                Process.Start(psi);
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore("Impossibile aprire il sito: " + ex.Message);
+
+            }
+        }
+
+        private void LnkIcon_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                var psi = new ProcessStartInfo
+                {
+                    FileName = "https://icons8.it/",
+                    UseShellExecute = true
+                };
+                Process.Start(psi);
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore("Impossibile aprire il sito: " + ex.Message);
+
+            }
         }
     }
 }

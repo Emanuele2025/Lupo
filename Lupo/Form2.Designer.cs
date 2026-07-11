@@ -39,6 +39,8 @@
             label6 = new Label();
             pictureBox1 = new PictureBox();
             TxtEmail = new TextBox();
+            LnkIcon = new LinkLabel();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -67,7 +69,7 @@
             // 
             // BtnChiudi
             // 
-            BtnChiudi.Location = new Point(713, 283);
+            BtnChiudi.Location = new Point(713, 311);
             BtnChiudi.Name = "BtnChiudi";
             BtnChiudi.Size = new Size(75, 23);
             BtnChiudi.TabIndex = 9;
@@ -114,7 +116,7 @@
             // lnlEmail
             // 
             lnlEmail.AutoSize = true;
-            lnlEmail.Location = new Point(595, 235);
+            lnlEmail.Location = new Point(595, 239);
             lnlEmail.Name = "lnlEmail";
             lnlEmail.Size = new Size(176, 15);
             lnlEmail.TabIndex = 14;
@@ -142,18 +144,40 @@
             // 
             // TxtEmail
             // 
-            TxtEmail.Location = new Point(595, 253);
+            TxtEmail.Location = new Point(595, 257);
             TxtEmail.Name = "TxtEmail";
             TxtEmail.ReadOnly = true;
             TxtEmail.Size = new Size(193, 23);
             TxtEmail.TabIndex = 17;
             TxtEmail.Text = "emanuelemattei@tutanota.com";
             // 
+            // LnkIcon
+            // 
+            LnkIcon.AutoSize = true;
+            LnkIcon.Location = new Point(311, 283);
+            LnkIcon.Name = "LnkIcon";
+            LnkIcon.Size = new Size(474, 15);
+            LnkIcon.TabIndex = 19;
+            LnkIcon.TabStop = true;
+            LnkIcon.Text = "Alcune icone utilizzate in questo programma sono fornite da Icons8. by https://icons8.it/";
+            LnkIcon.LinkClicked += LnkIcon_LinkClicked;
+            // 
+            // label7
+            // 
+            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label7.Location = new Point(311, 241);
+            label7.Name = "label7";
+            label7.Size = new Size(213, 37);
+            label7.TabIndex = 18;
+            label7.Text = "Un grazie ai siti qui di seguito per le icone ed immagini gratuite.";
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 318);
+            ClientSize = new Size(800, 357);
+            Controls.Add(LnkIcon);
+            Controls.Add(label7);
             Controls.Add(TxtEmail);
             Controls.Add(LblDescrizione);
             Controls.Add(pictureBox1);
@@ -190,5 +214,7 @@
         private Label label6;
         private PictureBox pictureBox1;
         private TextBox TxtEmail;
+        private LinkLabel LnkIcon;
+        private Label label7;
     }
 }
