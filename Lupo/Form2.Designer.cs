@@ -69,6 +69,8 @@
             // 
             // BtnChiudi
             // 
+            BtnChiudi.Image = Properties.Resources.chiudi_16;
+            BtnChiudi.ImageAlign = ContentAlignment.MiddleRight;
             BtnChiudi.Location = new Point(713, 311);
             BtnChiudi.Name = "BtnChiudi";
             BtnChiudi.Size = new Size(75, 23);

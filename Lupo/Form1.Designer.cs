@@ -50,6 +50,8 @@
             // 
             // BtnScarica
             // 
+            BtnScarica.Image = Properties.Resources.download;
+            BtnScarica.ImageAlign = ContentAlignment.MiddleRight;
             BtnScarica.Location = new Point(230, 103);
             BtnScarica.Name = "BtnScarica";
             BtnScarica.Size = new Size(75, 23);
@@ -166,6 +168,7 @@
             // 
             // MniInformazioni
             // 
+            MniInformazioni.Image = Properties.Resources.info_16;
             MniInformazioni.Name = "MniInformazioni";
             MniInformazioni.Size = new Size(153, 22);
             MniInformazioni.Text = "Informazioni....";

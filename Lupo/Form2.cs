@@ -18,6 +18,9 @@ namespace Lupo
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            //<a target="_blank" href="https://icons8.com/icon/13903/close-window">Chiudi La Finestra</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+            //<a target="_blank" href="https://icons8.com/icon/63308/info">Info</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+            //<a target="_blank" href="https://icons8.com/icon/21339/download">Download</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
             LblDescrizione.Text = GetDescrizione();
             label6.Text += " For info or anything else, get in touch with Emanuele at 339.1980065 or by email:";
         }
