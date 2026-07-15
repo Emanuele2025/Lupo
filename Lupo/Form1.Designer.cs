@@ -154,8 +154,9 @@
             // 
             // mniEsci
             // 
+            mniEsci.Image = Properties.Resources.chiudi_16;
             mniEsci.Name = "mniEsci";
-            mniEsci.Size = new Size(94, 22);
+            mniEsci.Size = new Size(180, 22);
             mniEsci.Text = "&Esci";
             mniEsci.Click += mniEsci_Click;
             // 
@@ -170,7 +171,7 @@
             // 
             MniInformazioni.Image = Properties.Resources.info_16;
             MniInformazioni.Name = "MniInformazioni";
-            MniInformazioni.Size = new Size(153, 22);
+            MniInformazioni.Size = new Size(180, 22);
             MniInformazioni.Text = "Informazioni....";
             MniInformazioni.Click += MniInformazioni_Click;
             // 
