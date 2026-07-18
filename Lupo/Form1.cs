@@ -91,7 +91,7 @@ namespace Lupo
                 {
                     percorsoCartella = TxtPercorsoCartella.Text.Trim();
                 }
- 
+
 
                 await DownloadImmagine(TxtPercorsoCartella.Text.Trim());
                 string cartella = percorsoCartella;
@@ -340,6 +340,28 @@ namespace Lupo
             Form2 info = new Form2();
             info.ShowDialog();
 
+        }
+
+        private void apriCartellaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                string percorsoFileDaAprire = Path.Combine(percorsoCartella, lsbListaFile.SelectedItem?.ToString());
+                if (!File.Exists(percorsoFileDaAprire))
+                {
+                    return;
+                }
+
+                
+                string argument = "/select, \"" + percorsoFileDaAprire + "\"";
+
+                System.Diagnostics.Process.Start("explorer.exe", argument);
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore(ex.Message);
+            }
         }
     }
 }

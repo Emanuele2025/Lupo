@@ -43,9 +43,12 @@
             mniEsci = new ToolStripMenuItem();
             informazioniToolStripMenuItem = new ToolStripMenuItem();
             MniInformazioni = new ToolStripMenuItem();
+            cmsMenuApriFile = new ContextMenuStrip(components);
+            apriCartellaToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)pcbAnteprima).BeginInit();
             cmsMenu.SuspendLayout();
             mnsMenu.SuspendLayout();
+            cmsMenuApriFile.SuspendLayout();
             SuspendLayout();
             // 
             // BtnScarica
@@ -116,6 +119,7 @@
             // 
             // lsbListaFile
             // 
+            lsbListaFile.ContextMenuStrip = cmsMenuApriFile;
             lsbListaFile.FormattingEnabled = true;
             lsbListaFile.Location = new Point(365, 51);
             lsbListaFile.Name = "lsbListaFile";
@@ -175,6 +179,19 @@
             MniInformazioni.Text = "Informazioni....";
             MniInformazioni.Click += MniInformazioni_Click;
             // 
+            // cmsMenuApriFile
+            // 
+            cmsMenuApriFile.Items.AddRange(new ToolStripItem[] { apriCartellaToolStripMenuItem });
+            cmsMenuApriFile.Name = "cmsMenuApriFile";
+            cmsMenuApriFile.Size = new Size(181, 48);
+            // 
+            // apriCartellaToolStripMenuItem
+            // 
+            apriCartellaToolStripMenuItem.Name = "apriCartellaToolStripMenuItem";
+            apriCartellaToolStripMenuItem.Size = new Size(180, 22);
+            apriCartellaToolStripMenuItem.Text = "Apri cartella";
+            apriCartellaToolStripMenuItem.Click += apriCartellaToolStripMenuItem_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -199,6 +216,7 @@
             cmsMenu.ResumeLayout(false);
             mnsMenu.ResumeLayout(false);
             mnsMenu.PerformLayout();
+            cmsMenuApriFile.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -219,5 +237,7 @@
         private ToolStripMenuItem mniEsci;
         private ToolStripMenuItem informazioniToolStripMenuItem;
         private ToolStripMenuItem MniInformazioni;
+        private ContextMenuStrip cmsMenuApriFile;
+        private ToolStripMenuItem apriCartellaToolStripMenuItem;
     }
 }
