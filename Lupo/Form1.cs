@@ -29,6 +29,11 @@ namespace Lupo
         {
             //TODO fare pacchetto setup
             //TODO icone gratuite https://icons8.com/
+            //TODO: Spostare il menu in alto come per gli altri programmi
+            //TODO: togliere dove è presente messagebox
+
+
+
             try
             {
                 //Rilevo il percorso
