@@ -89,7 +89,7 @@ namespace Lupo
                 if (TxtPercorsoCartella.Text.Trim() == "")
                 {
 
-                    MessageBox.Show("Impostare un percorso dove salvare l'immagine.", "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Utility.MessaggioInfo("Impostare un percorso dove salvare l'immagine.");
                     return;
                 }
                 if (string.IsNullOrWhiteSpace(percorsoCartella))
@@ -202,7 +202,7 @@ namespace Lupo
                 await File.WriteAllBytesAsync(nomeFile, imageBytes);
 
 
-                MessageBox.Show("File salvato con successo.", "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Utility.MessaggioInfo("File salvato con successo.");
 
 
 
@@ -303,11 +303,12 @@ namespace Lupo
 
         private void mniImpostaComeSfondo_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             try
             {
                 if (lsbListaFile.SelectedIndex < 0)
                 {
-                    MessageBox.Show("Selezionare un file.", "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Utility.MessaggioInfo("Selezionare un file.");
                     return;
                 }
                 string percorsoFileImmagine = Path.Combine(percorsoCartella, lsbListaFile.SelectedItem?.ToString());
@@ -318,13 +319,20 @@ namespace Lupo
                 }
                 if (risultato)
                 {
-                    MessageBox.Show("Immagine impostata come sfondo.", "Lupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Utility.MessaggioInfo("Immagine impostata come sfondo.");
                 }
 
             }
             catch (Exception ex)
             {
                 Utility.MessaggioErrore(ex.Message);
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+
+
+
             }
         }
 
