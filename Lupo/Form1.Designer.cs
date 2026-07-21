@@ -37,18 +37,18 @@
             cmsMenu = new ContextMenuStrip(components);
             mniImpostaComeSfondo = new ToolStripMenuItem();
             lsbListaFile = new ListBox();
+            cmsMenuApriFile = new ContextMenuStrip(components);
+            apriCartellaToolStripMenuItem = new ToolStripMenuItem();
             label2 = new Label();
             mnsMenu = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             mniEsci = new ToolStripMenuItem();
             informazioniToolStripMenuItem = new ToolStripMenuItem();
             MniInformazioni = new ToolStripMenuItem();
-            cmsMenuApriFile = new ContextMenuStrip(components);
-            apriCartellaToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)pcbAnteprima).BeginInit();
             cmsMenu.SuspendLayout();
-            mnsMenu.SuspendLayout();
             cmsMenuApriFile.SuspendLayout();
+            mnsMenu.SuspendLayout();
             SuspendLayout();
             // 
             // BtnScarica
@@ -127,13 +127,25 @@
             lsbListaFile.TabIndex = 5;
             lsbListaFile.SelectedIndexChanged += lsbListaFile_SelectedIndexChanged;
             // 
+            // cmsMenuApriFile
+            // 
+            cmsMenuApriFile.Items.AddRange(new ToolStripItem[] { apriCartellaToolStripMenuItem });
+            cmsMenuApriFile.Name = "cmsMenuApriFile";
+            cmsMenuApriFile.Size = new Size(138, 26);
+            // 
+            // apriCartellaToolStripMenuItem
+            // 
+            apriCartellaToolStripMenuItem.Name = "apriCartellaToolStripMenuItem";
+            apriCartellaToolStripMenuItem.Size = new Size(137, 22);
+            apriCartellaToolStripMenuItem.Text = "Apri cartella";
+            apriCartellaToolStripMenuItem.Click += apriCartellaToolStripMenuItem_Click;
+            // 
             // label2
             // 
             label2.BackColor = SystemColors.Highlight;
-            label2.Dock = DockStyle.Top;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(0, 0);
+            label2.Location = new Point(0, 24);
             label2.Name = "label2";
             label2.Size = new Size(964, 25);
             label2.TabIndex = 6;
@@ -143,7 +155,7 @@
             // mnsMenu
             // 
             mnsMenu.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, informazioniToolStripMenuItem });
-            mnsMenu.Location = new Point(0, 25);
+            mnsMenu.Location = new Point(0, 0);
             mnsMenu.Name = "mnsMenu";
             mnsMenu.Size = new Size(964, 24);
             mnsMenu.TabIndex = 7;
@@ -160,7 +172,7 @@
             // 
             mniEsci.Image = Properties.Resources.chiudi_16;
             mniEsci.Name = "mniEsci";
-            mniEsci.Size = new Size(180, 22);
+            mniEsci.Size = new Size(94, 22);
             mniEsci.Text = "&Esci";
             mniEsci.Click += mniEsci_Click;
             // 
@@ -175,22 +187,9 @@
             // 
             MniInformazioni.Image = Properties.Resources.info_16;
             MniInformazioni.Name = "MniInformazioni";
-            MniInformazioni.Size = new Size(180, 22);
+            MniInformazioni.Size = new Size(153, 22);
             MniInformazioni.Text = "Informazioni....";
             MniInformazioni.Click += MniInformazioni_Click;
-            // 
-            // cmsMenuApriFile
-            // 
-            cmsMenuApriFile.Items.AddRange(new ToolStripItem[] { apriCartellaToolStripMenuItem });
-            cmsMenuApriFile.Name = "cmsMenuApriFile";
-            cmsMenuApriFile.Size = new Size(181, 48);
-            // 
-            // apriCartellaToolStripMenuItem
-            // 
-            apriCartellaToolStripMenuItem.Name = "apriCartellaToolStripMenuItem";
-            apriCartellaToolStripMenuItem.Size = new Size(180, 22);
-            apriCartellaToolStripMenuItem.Text = "Apri cartella";
-            apriCartellaToolStripMenuItem.Click += apriCartellaToolStripMenuItem_Click;
             // 
             // Form1
             // 
@@ -214,9 +213,9 @@
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pcbAnteprima).EndInit();
             cmsMenu.ResumeLayout(false);
+            cmsMenuApriFile.ResumeLayout(false);
             mnsMenu.ResumeLayout(false);
             mnsMenu.PerformLayout();
-            cmsMenuApriFile.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
