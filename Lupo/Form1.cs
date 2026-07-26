@@ -84,6 +84,7 @@ namespace Lupo
 
         private async void BtnScarica_Click(object sender, EventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
             try
             {
                 if (TxtPercorsoCartella.Text.Trim() == "")
@@ -144,6 +145,10 @@ namespace Lupo
             catch (Exception ex)
             {
                 Utility.MessaggioErrore(ex.Message);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
             }
         }
 
