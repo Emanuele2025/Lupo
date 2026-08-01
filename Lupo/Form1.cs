@@ -244,7 +244,10 @@ namespace Lupo
 
         }
 
-        //Per caricare l'immagine di tipo webp nel controllo PictureBox
+        
+        /// <summary>
+        /// Per caricare l'immagine di tipo webp nel controllo PictureBox
+        /// </summary>
         private void CaricaImmagineDaListBox()
         {
             string percorso = Path.Combine(percorsoCartella, lsbListaFile.SelectedItem?.ToString());
