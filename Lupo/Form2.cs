@@ -25,6 +25,11 @@ namespace Lupo
             label6.Text += " For info or anything else, get in touch with Emanuele at 339.1980065 or by email:";
         }
 
+        
+        /// <summary>
+        /// Fornisce la descrizione del programma
+        /// </summary>
+        /// <returns></returns>
         private string GetDescrizione()
         {
 

@@ -1,5 +1,6 @@
 
 using SkiaSharp;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Text.Json;
 using static System.Net.Mime.MediaTypeNames;
@@ -377,7 +378,7 @@ namespace Lupo
                 
                 string argument = "/select, \"" + percorsoFileDaAprire + "\"";
 
-                System.Diagnostics.Process.Start("explorer.exe", argument);
+                Process.Start("explorer.exe", argument);
             }
             catch (Exception ex)
             {
