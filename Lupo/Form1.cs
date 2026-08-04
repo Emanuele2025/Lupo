@@ -28,13 +28,7 @@ namespace Lupo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //TODO fare pacchetto setup
-           
-            //TODO: Spostare il menu in alto come per gli altri programmi
-            //TODO: togliere dove è presente messagebox
-
-
-
+            
             try
             {
                 //Rilevo il percorso
