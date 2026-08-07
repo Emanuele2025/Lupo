@@ -118,7 +118,7 @@ namespace Lupo
                 if (!string.IsNullOrWhiteSpace(TxtPercorsoCartella.Text.Trim()) && TxtPercorsoCartella.Text != percorsoCartella)
                 {
 
-                    if (MessageBox.Show("Il percorso selezionato è diverso da quello precedente, si vuole salvare?", "Lupo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                    if (!Utility.MessaggioSiNo("Il percorso selezionato è diverso da quello precedente, si vuole salvare?"))
                     {
                         return;
                     }
