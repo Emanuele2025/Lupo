@@ -15,11 +15,11 @@
       "RelativeMoniker": "D:0:0:{32218771-9D3F-2369-93B0-1C92D0F9007C}|Lupo\\Lupo.csproj|solutionrelative:lupo\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32218771-9D3F-2369-93B0-1C92D0F9007C}|Lupo\\Lupo.csproj|c:\\users\\emanu\\source\\repos\\emanuele2025\\lupo\\lupo\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{32218771-9D3F-2369-93B0-1C92D0F9007C}|Lupo\\Lupo.csproj|C:\\Users\\emanu\\source\\repos\\Emanuele2025\\Lupo\\lupo\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{32218771-9D3F-2369-93B0-1C92D0F9007C}|Lupo\\Lupo.csproj|solutionrelative:lupo\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32218771-9D3F-2369-93B0-1C92D0F9007C}|Lupo\\Lupo.csproj|c:\\users\\emanu\\source\\repos\\emanuele2025\\lupo\\lupo\\frminformazioni.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{32218771-9D3F-2369-93B0-1C92D0F9007C}|Lupo\\Lupo.csproj|C:\\Users\\emanu\\source\\repos\\Emanuele2025\\Lupo\\lupo\\frminformazioni.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{32218771-9D3F-2369-93B0-1C92D0F9007C}|Lupo\\Lupo.csproj|solutionrelative:lupo\\frminformazioni.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -74,8 +74,7 @@
               "ToolTip": "C:\\Users\\emanu\\source\\repos\\Emanuele2025\\Lupo\\Lupo\\Form2.cs [Progettazione]",
               "RelativeToolTip": "Lupo\\Form2.cs [Progettazione]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-07T11:14:35.675Z",
-              "EditorCaption": " [Progettazione]"
+              "WhenOpened": "2026-08-07T11:14:35.675Z"
             },
             {
               "$type": "Document",
@@ -86,8 +85,7 @@
               "ToolTip": "C:\\Users\\emanu\\source\\repos\\Emanuele2025\\Lupo\\Lupo\\FrmInformazioni.cs [Progettazione]",
               "RelativeToolTip": "Lupo\\FrmInformazioni.cs [Progettazione]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-07T11:13:21.565Z",
-              "EditorCaption": " [Progettazione]"
+              "WhenOpened": "2026-08-07T11:13:21.565Z"
             },
             {
               "$type": "Document",
@@ -95,9 +93,9 @@
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\emanu\\source\\repos\\Emanuele2025\\Lupo\\Lupo\\Form1.cs",
               "RelativeDocumentMoniker": "Lupo\\Form1.cs",
-              "ToolTip": "C:\\Users\\emanu\\source\\repos\\Emanuele2025\\Lupo\\Lupo\\Form1.cs",
-              "RelativeToolTip": "Lupo\\Form1.cs",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAEwJMAAAAIAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\emanu\\source\\repos\\Emanuele2025\\Lupo\\Lupo\\Form1.cs*",
+              "RelativeToolTip": "Lupo\\Form1.cs*",
+              "ViewState": "AgIAAAABAAAAAAAAAAD4vw4BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-04T04:24:05.89Z",
               "EditorCaption": ""
@@ -111,8 +109,7 @@
               "ToolTip": "C:\\Users\\emanu\\source\\repos\\Emanuele2025\\Lupo\\Lupo\\Form1.cs [Progettazione]",
               "RelativeToolTip": "Lupo\\Form1.cs [Progettazione]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-09T20:47:45.173Z",
-              "EditorCaption": " [Progettazione]"
+              "WhenOpened": "2026-02-09T20:47:45.173Z"
             },
             {
               "$type": "Document",

@@ -28,7 +28,7 @@ namespace Lupo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
             try
             {
                 //Rilevo il percorso
@@ -147,6 +147,7 @@ namespace Lupo
             }
         }
 
+        #region Funzioni varie
 
 
         //Funzioni varie
@@ -239,7 +240,7 @@ namespace Lupo
 
         }
 
-        
+
         /// <summary>
         /// Per caricare l'immagine di tipo webp nel controllo PictureBox
         /// </summary>
@@ -266,6 +267,7 @@ namespace Lupo
                 }
             }
         }
+        #endregion
 
         private void BtnCercaCartella_Click(object sender, EventArgs e)
         {
@@ -369,7 +371,7 @@ namespace Lupo
                     return;
                 }
 
-                
+
                 string argument = "/select, \"" + percorsoFileDaAprire + "\"";
 
                 Process.Start("explorer.exe", argument);
