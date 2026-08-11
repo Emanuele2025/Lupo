@@ -150,8 +150,6 @@ namespace Lupo
         #region Funzioni varie
 
 
-        //Funzioni varie
-
         private void SalvaPercorso(string percorso)
         {
             try
