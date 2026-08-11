@@ -169,7 +169,7 @@
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label7.Location = new Point(311, 241);
             label7.Name = "label7";
-            label7.Size = new Size(213, 37);
+            label7.Size = new Size(245, 37);
             label7.TabIndex = 18;
             label7.Text = "Un grazie ai siti qui di seguito per le icone ed immagini gratuite.";
             // 
