@@ -149,7 +149,10 @@ namespace Lupo
 
         #region Funzioni varie
 
-
+        /// <summary>
+        /// Metodo che salva il percorso nella cartella profilo utente.
+        /// </summary>
+        /// <param name="percorso"></param>
         private void SalvaPercorso(string percorso)
         {
             try
