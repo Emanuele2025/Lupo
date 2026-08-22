@@ -237,8 +237,6 @@ namespace Lupo
             return percorsoRilevato;
 
 
-
-
         }
 
 
