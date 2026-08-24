@@ -245,24 +245,30 @@ namespace Lupo
         /// </summary>
         private void CaricaImmagineDaListBox()
         {
-            string percorso = Path.Combine(percorsoCartella, lsbListaFile.SelectedItem?.ToString());
-            using (var data = File.OpenRead(percorso))
+            string nomeFile = lsbListaFile.SelectedItem?.ToString() ?? "";
+            if (!string.IsNullOrWhiteSpace(nomeFile))
             {
-                //Creo un oggetto skiaBitmap dallo stream dati
-                var skiaBitmap = SKBitmap.Decode(data);
 
-                //Converto SKBitmap in System.Drawing.Image
-                using (var ms = new MemoryStream())
+
+                string percorso = Path.Combine(percorsoCartella, nomeFile);
+                using (var data = File.OpenRead(percorso))
                 {
-                    //Imposto nel MemoryStream l'oggetto  SKBitmap come PNG 
-                    using (var skiaImage = SKImage.FromBitmap(skiaBitmap))
-                    {
-                        skiaImage.Encode(SKEncodedImageFormat.Png, 100).SaveTo(ms);
-                    }
-                    ms.Position = 0; // Reset stream position
+                    //Creo un oggetto skiaBitmap dallo stream dati
+                    var skiaBitmap = SKBitmap.Decode(data);
 
-                    //Visualizzo l'immagine nel PictureBox
-                    pcbAnteprima.Image = System.Drawing.Image.FromStream(ms);
+                    //Converto SKBitmap in System.Drawing.Image
+                    using (var ms = new MemoryStream())
+                    {
+                        //Imposto nel MemoryStream l'oggetto  SKBitmap come PNG 
+                        using (var skiaImage = SKImage.FromBitmap(skiaBitmap))
+                        {
+                            skiaImage.Encode(SKEncodedImageFormat.Png, 100).SaveTo(ms);
+                        }
+                        ms.Position = 0; // Reset stream position
+
+                        //Visualizzo l'immagine nel PictureBox
+                        pcbAnteprima.Image = System.Drawing.Image.FromStream(ms);
+                    }
                 }
             }
         }
@@ -352,7 +358,7 @@ namespace Lupo
 
         private void MniInformazioni_Click(object sender, EventArgs e)
         {
-            
+
             Form2 info = new Form2();
             info.ShowDialog();
 
