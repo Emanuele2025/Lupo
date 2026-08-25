@@ -241,7 +241,7 @@ namespace Lupo
 
 
         /// <summary>
-        /// Per caricare l'immagine di tipo webp nel controllo PictureBox
+        /// Funzione per caricare l'immagine di tipo webp nel controllo PictureBox
         /// </summary>
         private void CaricaImmagineDaListBox()
         {
