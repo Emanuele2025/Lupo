@@ -374,8 +374,6 @@ namespace Lupo
                 {
                     return;
                 }
-
-
                 string argument = "/select, \"" + percorsoFileDaAprire + "\"";
 
                 Process.Start("explorer.exe", argument);
