@@ -368,8 +368,10 @@ namespace Lupo
         {
             try
             {
+                if (lsbListaFile.SelectedItem == null)
+                    return;
 
-                string percorsoFileDaAprire = Path.Combine(percorsoCartella, lsbListaFile.SelectedItem?.ToString());
+                string percorsoFileDaAprire = Path.Combine(percorsoCartella, lsbListaFile.SelectedItem.ToString());
                 if (!File.Exists(percorsoFileDaAprire))
                 {
                     return;
