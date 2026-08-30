@@ -164,8 +164,6 @@ namespace Lupo
                 Utility.MessaggioErrore(ex.Message);
             }
 
-
-
         }
 
         /// <summary>
