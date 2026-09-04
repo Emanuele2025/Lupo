@@ -369,6 +369,12 @@ namespace Lupo
                 if (lsbListaFile.SelectedItem == null)
                     return;
 
+                if(lsbListaFile.Items.Count == 0)
+                {
+                    Utility.MessaggioInfo("Nessun file presente nella lista.");
+                    return;
+                }
+
                 string percorsoFileDaAprire = Path.Combine(percorsoCartella, lsbListaFile.SelectedItem.ToString());
                 if (!File.Exists(percorsoFileDaAprire))
                 {
