@@ -28,7 +28,7 @@ namespace Lupo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Cursor = Cursors.WaitCursor;
             try
             {
                 //Rilevo il percorso
@@ -72,7 +72,10 @@ namespace Lupo
 
                 Utility.MessaggioErrore(ex.Message);
             }
-
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
 
 
         }
@@ -233,7 +236,6 @@ namespace Lupo
 
 
             return percorsoRilevato;
-
 
         }
 
