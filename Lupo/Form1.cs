@@ -355,10 +355,8 @@ namespace Lupo
 
         private void MniInformazioni_Click(object sender, EventArgs e)
         {
-
             Form2 info = new Form2();
             info.ShowDialog();
-
         }
 
         private void apriCartellaToolStripMenuItem_Click(object sender, EventArgs e)
