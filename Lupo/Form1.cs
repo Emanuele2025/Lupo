@@ -339,7 +339,6 @@ namespace Lupo
                 Cursor.Current = Cursors.Default;
 
 
-
             }
         }
 
