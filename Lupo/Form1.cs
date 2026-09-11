@@ -337,8 +337,6 @@ namespace Lupo
             finally
             {
                 Cursor.Current = Cursors.Default;
-
-
             }
         }
 
