@@ -207,8 +207,6 @@ namespace Lupo
 
                 Utility.MessaggioInfo("File salvato con successo.");
 
-
-
             }
             catch (Exception ex)
             {
