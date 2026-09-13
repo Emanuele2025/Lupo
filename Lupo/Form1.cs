@@ -215,7 +215,6 @@ namespace Lupo
         }
 
 
-
         /// <summary>
         /// Rileva dalle impsostazioni il percorso dell'ultimo salvataggio
         /// </summary>
