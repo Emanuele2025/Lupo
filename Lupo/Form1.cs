@@ -137,8 +137,6 @@ namespace Lupo
                     SalvaPercorso(percorsoCartella);
                 }
 
-
-
             }
             catch (Exception ex)
             {
