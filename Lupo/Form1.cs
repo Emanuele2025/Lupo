@@ -202,7 +202,6 @@ namespace Lupo
                 byte[] imageBytes = await client.GetByteArrayAsync(imageUrl);
                 await File.WriteAllBytesAsync(nomeFile, imageBytes);
 
-
                 Utility.MessaggioInfo("File salvato con successo.");
 
             }
