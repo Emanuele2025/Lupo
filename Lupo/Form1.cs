@@ -87,7 +87,6 @@ namespace Lupo
             {
                 if (TxtPercorsoCartella.Text.Trim() == "")
                 {
-
                     Utility.MessaggioInfo("Impostare un percorso dove salvare l'immagine.");
                     return;
                 }
