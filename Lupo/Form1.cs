@@ -298,8 +298,7 @@ namespace Lupo
             {
                 Utility.MessaggioErrore(ex.Message);
             }
-
-        }
+       }
 
         private void mniImpostaComeSfondo_Click(object sender, EventArgs e)
         {
