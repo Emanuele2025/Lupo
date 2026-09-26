@@ -331,7 +331,6 @@ namespace Lupo
                 Cursor.Current = Cursors.Default;
             }
         }
-
         private void cmsMenu_Opening(object sender, System.ComponentModel.CancelEventArgs e)
         {
             e.Cancel = (pcbAnteprima.Image == null);
