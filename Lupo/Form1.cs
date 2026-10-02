@@ -20,7 +20,6 @@ namespace Lupo
         private string percorsoCartella = string.Empty;
 
 
-
         public Form1()
         {
             InitializeComponent();
