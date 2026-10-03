@@ -11,6 +11,8 @@ namespace Lupo
     public static class Utility
     {
 
+        public static string Errore = "Si è verificato il seguente errore: ";
+
         /// <summary>
         /// Messaggio informativo
         /// </summary>
