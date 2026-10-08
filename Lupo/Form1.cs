@@ -228,7 +228,6 @@ namespace Lupo
 
         }
 
-
         /// <summary>
         /// Funzione per caricare l'immagine di tipo webp nel controllo PictureBox
         /// </summary>
