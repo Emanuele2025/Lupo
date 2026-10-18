@@ -200,7 +200,6 @@ namespace Lupo
                 await File.WriteAllBytesAsync(nomeFile, imageBytes);
 
                 Utility.MessaggioInfo("File salvato con successo.");
-
             }
             catch (Exception ex)
             {
