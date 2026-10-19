@@ -163,7 +163,6 @@ namespace Lupo
             }
 
         }
-
         /// <summary>
         /// Effettua il download dell'immagine.
         /// </summary>
