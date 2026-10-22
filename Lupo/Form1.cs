@@ -128,7 +128,6 @@ namespace Lupo
                     }
 
                 }
-
                 if (!string.IsNullOrWhiteSpace(percorsoCartella))
                 {
                     SalvaPercorso(percorsoCartella);
