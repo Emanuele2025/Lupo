@@ -273,7 +273,6 @@ namespace Lupo
                     }
                 }
 
-
             }
             catch (Exception ex)
             {
