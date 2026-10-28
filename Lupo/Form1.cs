@@ -279,7 +279,6 @@ namespace Lupo
                 Utility.MessaggioErrore(ex.Message);
             }
         }
-
         private void lsbListaFile_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
