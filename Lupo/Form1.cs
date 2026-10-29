@@ -233,7 +233,6 @@ namespace Lupo
             string nomeFile = lsbListaFile.SelectedItem?.ToString() ?? "";
             if (!string.IsNullOrWhiteSpace(nomeFile))
             {
-
                 string percorso = Path.Combine(percorsoCartella, nomeFile);
                 using (var data = File.OpenRead(percorso))
                 {
