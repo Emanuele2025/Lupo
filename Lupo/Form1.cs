@@ -220,7 +220,6 @@ namespace Lupo
             {
                 Utility.MessaggioErrore(Utility.Errore + ex.Message);
             }
-
             return percorsoRilevato;
 
         }
