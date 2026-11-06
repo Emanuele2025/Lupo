@@ -160,7 +160,6 @@ namespace Lupo
             {
                 Utility.MessaggioErrore(ex.Message);
             }
-
         }
         /// <summary>
         /// Effettua il download dell'immagine.
