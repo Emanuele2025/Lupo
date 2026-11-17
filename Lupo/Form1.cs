@@ -75,7 +75,6 @@ namespace Lupo
             {
                 Cursor = Cursors.Default;
             }
-
         }
 
         private async void BtnScarica_Click(object sender, EventArgs e)
