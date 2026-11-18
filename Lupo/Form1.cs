@@ -68,7 +68,6 @@ namespace Lupo
             }
             catch (Exception ex)
             {
-
                 Utility.MessaggioErrore(ex.Message);
             }
             finally
