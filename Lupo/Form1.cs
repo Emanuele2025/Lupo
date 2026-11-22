@@ -264,7 +264,6 @@ namespace Lupo
                         TxtPercorsoCartella.Text = folderBrowserDialog.SelectedPath;
                     }
                 }
-
             }
             catch (Exception ex)
             {
