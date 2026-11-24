@@ -16,7 +16,7 @@ namespace Lupo
         private const int SPI_SETDESKWALLPAPER = 20;
         private const int SPIF_UPDATEINIFILE = 0x01;
         private const int SPIF_SENDWININICHANGE = 0x02;
-
+        //fine dichiarazione
         private string percorsoCartella = string.Empty;
 
 
