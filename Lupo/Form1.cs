@@ -280,7 +280,7 @@ namespace Lupo
             {
                 Utility.MessaggioErrore(ex.Message);
             }
-       }
+        }
 
         private void mniImpostaComeSfondo_Click(object sender, EventArgs e)
         {
@@ -292,15 +292,19 @@ namespace Lupo
                     Utility.MessaggioInfo("Selezionare un file.");
                     return;
                 }
-                string percorsoFileImmagine = Path.Combine(percorsoCartella, lsbListaFile.SelectedItem?.ToString());
-                bool risultato = SystemParametersInfo(SPI_SETDESKWALLPAPER, 0, percorsoFileImmagine, SPIF_UPDATEINIFILE | SPIF_SENDWININICHANGE);
-                if (!risultato)
+                if (lsbListaFile.SelectedItem != null)
                 {
-                    throw new Exception("Impossibile impostare l'immagine come sfondo del desktop.");
-                }
-                if (risultato)
-                {
-                    Utility.MessaggioInfo("Immagine impostata come sfondo.");
+                    string nomeFileSelezionato = lsbListaFile.SelectedItem?.ToString() ?? "";
+                    string percorsoFileImmagine = Path.Combine(percorsoCartella, nomeFileSelezionato);
+                    bool risultato = SystemParametersInfo(SPI_SETDESKWALLPAPER, 0, percorsoFileImmagine, SPIF_UPDATEINIFILE | SPIF_SENDWININICHANGE);
+                    if (!risultato)
+                    {
+                        throw new Exception("Impossibile impostare l'immagine come sfondo del desktop.");
+                    }
+                    if (risultato)
+                    {
+                        Utility.MessaggioInfo("Immagine impostata come sfondo.");
+                    }
                 }
 
             }
@@ -336,7 +340,7 @@ namespace Lupo
                 if (lsbListaFile.SelectedItem == null)
                     return;
 
-                if(lsbListaFile.Items.Count == 0)
+                if (lsbListaFile.Items.Count == 0)
                 {
                     Utility.MessaggioInfo("Nessun file presente nella lista.");
                     return;
