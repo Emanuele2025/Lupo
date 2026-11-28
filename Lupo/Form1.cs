@@ -17,6 +17,9 @@ namespace Lupo
         private const int SPIF_UPDATEINIFILE = 0x01;
         private const int SPIF_SENDWININICHANGE = 0x02;
         //fine dichiarazione
+
+
+        //Variabile per memorizzare il percorso dove salvare l'immagine scaricata
         private string percorsoCartella = string.Empty;
 
 
